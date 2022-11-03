@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+    <title>게시글 입력</title>
+    <link rel="stylesheet" href="post.css">
+    <script>
+      
+    </script>
+  </head>
+
+  <body>
+    <section id="container">
+      <div id="main_container">
+        <div class="post_form_container">
+          <form
+            class="post_form"
+            enctype="multipart/form-data"
+            class="post_form2"
+          >
+
+            <div
+              id="previewId"
+              
+            ></div>
+            <input type="file" name="photo" onchange="previewImage(this,'previewId')" />
+
+            <p>
+              <textarea
+                name="content"
+                id="text_field"
+                cols="50"
+                rows="5"
+                placeholder="140자 이내로 글 작성 가능합니다."
+              ></textarea>
+            </p>
+            <input class="submit_btn" type="submit" value="저장" />
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

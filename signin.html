@@ -9,6 +9,7 @@
     <title>MBTI 로그인</title>
     <link rel="stylesheet" href="css/sign.css">
     <script src="javascript/sign.js"></script>
+    <script src="javascript/path.js"></script>
 </head>
 
 <body>
@@ -30,9 +31,9 @@
                         <p>
                             <input type="password" placeholder="비밀번호를 입력해 주세요." id="password">
                         </p>
-                        <button type="button" style="margin-bottom : 15px;" class="submit_btn" onclick="handleLogin()">로그인</button>
+                        <button type="button" onclick="" style="margin-bottom : 15px;" class="submit_btn" onclick="handleLogin()">로그인</button>
                         <div>
-                            <button type="button" value="회원가입" class="submit_btn">회원가입</button>
+                            <button type="button" value="회원가입" onclick="to_signup()" class="submit_btn">회원가입</button>
                         </div>
                     </form>
                 </div>

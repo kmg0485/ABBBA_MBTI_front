@@ -7,7 +7,8 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <title>MBTI 로그인</title>
-    <link rel="stylesheet" href="sign.css">
+    <link rel="stylesheet" href="css/sign.css">
+    <script src="javascript/sign.js"></script>
 </head>
 
 <body>
@@ -21,23 +22,19 @@
                 <div class="form">
 
                     <h1 style="text-align: center;padding : 0 0 15px 0;">로그인 페이지</h1>
- 
+
                     <form>
                         <p class="login_user_name">
-                            <input style="margin-top:15px;" type="text" id="phone_number_or_email"
-                                name="phone_number_or_email" placeholder=" 아이디">
-                        </p>
+                            <input style="margin-top:15px;" type="text" id="nickname" placeholder="닉네임을 입력해 주세요.">
                         </p>
                         <p>
-                            <input type="password" placeholder="비밀번호" id="password" name="password"> 
+                            <input type="password" placeholder="비밀번호를 입력해 주세요." id="password">
                         </p>
-                        <button type="submit" id="submit_btn" style="margin-bottom : 15px;" 
-                            class="submit_btn">로그인</button>
-                        
-                                <div>
-                                    <input type="submit" value="회원가입" class="submit_btn">
-                                </div>
-
+                        <button type="button" style="margin-bottom : 15px;" class="submit_btn" onclick="handleLogin()">로그인</button>
+                        <div>
+                            <button type="button" value="회원가입" class="submit_btn">회원가입</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

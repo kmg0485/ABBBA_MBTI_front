@@ -8,47 +8,33 @@
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
         <title>MBTI 회원가입</title>
-        <link rel="stylesheet" href="sign.css">
+        <link rel="stylesheet" href="css/sign.css">
+        <script src="javascript/sign.js"></script>
     </head>
 
     <body>
 
             <div id="main_container">
-
                 <div class="form_container">
-
                     <div class="form">
-
                         <h1 style="text-align: center;
                         padding : 0 0 15px 0;">회원가입 페이지</h1>
-
                         <form>
                             <p>
-                                <input
-                                    type="text"
-                                    id="user_name"
-                                    placeholder="아이디"
-                                    name="phone_number_or_email">
+                                <input type="text"id="nickname" placeholder="아이디 겸 닉네임">
                             </p>
                             <p>
-                                <input type="text" placeholder="이름" name="user_name">
+                                <input type="password" placeholder="비밀번호" id="password">
                             </p>
                             <p>
-                                <input type="text" placeholder="비밀번호" name="user_id">
-                            </p>
-                            <p>
-                                <input type="password" placeholder="비밀번호 확인" name="password">
+                                <input type="password" placeholder="비밀번호 확인" id="password_check">
                             </p>
 
-                            <input type="submit" value="회원가입" class="submit_btn">
+                            <button onclick="handleSignup()" type="button"class="submit_btn">회원가입</button>
                         </form>
-
                     </div>
-
                 </div>
-
             </div>
-
     </body>
 
 </html>

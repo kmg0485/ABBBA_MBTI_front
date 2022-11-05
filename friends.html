@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로필 페이지</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="javascript/path.js"></script>
+    <script src="javascript/friends.js"></script>
+</head>
+<body>
+    <aside class="profile-card">
+      <div id="head-wrap">
+        <header>
+          <img id="profile_image" src="http://sports.hankooki.com/news/photo/202203/20220307_1_bodyFimg_6787549.jpg">
+
+          <!-- the username -->
+          <h1 id="nickname">닉네임 자리</h1>
+      
+          <!-- and role or location -->
+          <h2 id="bio">한 줄 소개 자리</h2>
+      
+        </header>
+        <!-- bit of a bio; who are you? -->
+        <div class="profile-bio">
+      
+          <p>
+            email : <span id="email">123@naver.com</span>
+          </p>
+          <p>
+            MBTI : <span id="mbti">INTP</span>
+          </p>
+          <div id="buttons">
+            <button onclick="to_insert_profile();" type="button" class="submit_btn">프로필 편집</button>
+            <button onclick="handleLogout();" type="button" class="submit_btn">로그아웃</button>
+          </div>
+        </div>
+
+      </div>
+      
+        <!-- some social links to show off -->
+      </aside>
+      <div class="profile_menu">
+      <section id="main_section">
+        <article id="following">
+
+        </article>
+        <article id="follower">
+
+        </article>
+        <article id="movies">
+
+        </article>
+        <article id="articles">
+
+        </article>
+        <article id="comments">
+
+        </article>
+      </section>
+    </div>
+</body>
+</html>

@@ -38,6 +38,7 @@ async function handleLogin(){
         })
     })
     const response_json = await response.json()
+    console.log(response_json)
 
     localStorage.setItem("access", response_json.access);
     localStorage.setItem("refresh", response_json.refresh);

@@ -50,4 +50,12 @@ async function handleLogin(){
     }).join(''));
 
     localStorage.setItem("payload", jsonPayload);
+    alert("로그인이 완료되었습니다!")
+}
+
+function handleLogout(){
+    localStorage.removeItem("access")
+    localStorage.removeItem("refresh")
+    localStorage.removeItem("payload")
+    alert("로그아웃이 완료되었습니다!")
 }

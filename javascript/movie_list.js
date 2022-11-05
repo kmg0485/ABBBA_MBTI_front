@@ -16,7 +16,7 @@ async function handleAuthorization(){
         },
         method : 'GET'
     })
-    
+
     response_json = await response.json()
     console.log(response_json)
     const movies = document.getElementById("container")
@@ -38,4 +38,5 @@ function handleLogout(){
     localStorage.removeItem("access")
     localStorage.removeItem("refresh")
     localStorage.removeItem("payload")
+    alert("로그아웃이 완료되었습니다.")
 }

@@ -161,14 +161,12 @@ h2 {
 }
 
 
-#buttons .submit_btn {
+.submit_btn {
     text-align: center;
     background: #fcdde2;
-    border-color: #fcdde2;
-    color: #fff;
+    color: rgb(85, 85, 85);
     border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
+    border : 1px solid #fcdde2;
     font-size: 14px;
     font-weight: 600;
     line-height: 28px;
@@ -190,15 +188,15 @@ input {
 @-webkit-keyframes material {
     100% {
         width: 80vw;
-        min-width: 700px;
+        min-width: 500px;
         height: 300px;
         margin-top: 400px;
         background: #FFFFFF;
         -webkit-border-radius: 10px;
+        opacity: 1;
     }
 }
 
-/* 프로필 페이지에만 적용하는 css */
 #main_section {
     background: white;
     width: 0;
@@ -207,11 +205,28 @@ input {
     left: 50%;
     top: 60%;
     overflow: hidden;
-    opacity: 1;
+    opacity: 0;
     margin-top: 70px;
+    display: flex;
+    padding:40px;
     -webkit-transform: translate(-50%, -50%);
     -webkit-border-radius: 50%;
     -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
     animation: material 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
+
+#recommend, #followers{
+    width: 50%;
+}
+
+#recommend{
+    border-right: 1px solid #EEEEEE;
+}
+
+.title {
+    font-size:20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+

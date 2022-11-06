@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+    <title>abbba</title>
+    <link rel="stylesheet" href="css/upload_post.css">
+   
+    
+  </head>
+
+  <body>
+    <section id="container">
+      <div id="main_container">
+          <form  class="post_form" style="padding-bottom: 100px">
+            <div class="title">NEW POST</div>
+            <p>
+              <textarea
+                name="title"
+                id="title"
+                cols="50"
+                rows="1"
+                placeholder="제목을 입력해주세요."
+              ></textarea>
+            </p>
+            <p>
+              <textarea
+                name="content"
+                id="content"
+                cols="50"
+                rows="15"
+                placeholder="내용을 입력해주세요."
+              ></textarea>
+            </p>
+            <input class="submit_btn" type="button" onclick="post(),to_articles()" value="저장" />
+          </form>
+      </div>
+    </section>
+    <script src="javascript/upload_post.js"></script>
+    <script src="javascript/path.js"></script>
+  </body>
+</html>

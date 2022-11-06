@@ -1,7 +1,3 @@
-window.onload = () => {
-    console.log("자스 파일 연결!")
-}
-
 async function handleSignup() {
     const nickname = document.getElementById("nickname").value
     const password = document.getElementById("password").value

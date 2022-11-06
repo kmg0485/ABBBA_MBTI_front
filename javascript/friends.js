@@ -9,7 +9,7 @@ async function handleAuthorization(){
     const payload = localStorage.getItem("payload");
     const payload_parse = JSON.parse(payload)
     const greeting = document.getElementById("nickname")
-    greeting.innerText = payload_parse.nickname
+    greeting.innerText = `${payload_parse.nickname}님, 반가워요!`
     const user = payload_parse.user_id
 
     const response = await fetch(`http://127.0.0.1:8000/users/${user}/profile/`,{

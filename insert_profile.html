@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로필 편집 페이지</title>
+    <link rel="stylesheet" href="css/friends.css">
+    <script src="javascript/sign.js"></script>
+    <script src="javascript/path.js"></script>
+    <script src="javascript/insert_profile.js"></script>
+</head>
+
+<body>
+    <aside class="profile-card">
+        <div id="head-wrap">
+            <div class="upload">
+                <input type="file" accept="image/*"onchange="previewImage(this)"  required class="real-upload">
+                <img src="https://cdn-icons-png.flaticon.com/512/5175/5175601.png">
+            </div>
+            <header>
+                <img id="profile_image"
+                    src="https://mblogthumb-phinf.pstatic.net/MjAyMDA2MTBfMTY1/MDAxNTkxNzQ2ODcyOTI2.Yw5WjjU3IuItPtqbegrIBJr3TSDMd_OPhQ2Nw-0-0ksg.8WgVjtB0fy0RCv0XhhUOOWt90Kz_394Zzb6xPjG6I8gg.PNG.lamute/user.png?type=w800">
+                <!-- the username -->
+                <h1 id="nickname">닉네임 자리</h1>
+
+                <!-- and role or location -->
+                <input class="text-input" style="margin-top:10px; width:60%;" type="text" placeholder="본인을 소개해 주세요."
+                    id="bio">
+
+            </header>
+            <!-- bit of a bio; who are you? -->
+            <div class="profile-bio">
+
+                <p>
+                    email : <span><input class="text-input" type="email" id="email" placeholder="이메일을 입력해 주세요."></span>
+                </p>
+                <p>
+                    MBTI : <span><input class="text-input" id="mbti" type="text" placeholder="mbti를 입력해 주세요."></span>
+                </p>
+                <div id="buttons">
+                    <button onclick="insertProfile();" type="button" class="submit_btn">저장</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+</body>
+
+</html>

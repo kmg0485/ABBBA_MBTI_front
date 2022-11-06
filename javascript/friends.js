@@ -32,9 +32,9 @@ async function handleAuthorization(){
     image.src = "/Users/lgb/Desktop/ABBBA_MBTI"+response_json.profile_img
 
     // 팔로워 목록 띄우기
-    const people = document.getElementById("followers")
+    const people = document.getElementById("followings")
 
-    response_json.followers.forEach(person => {
+    response_json.followings.forEach(person => {
         const wrappingDiv = document.createElement("div")
         wrappingDiv.style.display = "flex";
         wrappingDiv.style.width = "90%";

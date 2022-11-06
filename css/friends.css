@@ -216,7 +216,7 @@ input {
     animation: material 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
-#recommend, #followers{
+#recommend, #followings{
     width: 50%;
 }
 

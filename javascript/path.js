@@ -63,3 +63,8 @@ function to_mbti_menu() {
 function to_recommended_movies() {
     location.href = "recommended_movies.html"
 }
+
+// 메인 페이지로 이동
+function to_main() {
+    location.href = "main.html"
+}

@@ -1,0 +1,146 @@
+nav {
+  grid-area: header;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 80vw;
+  margin: 5vh auto;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+#container {
+  overflow: hidden;
+}
+
+.back {
+  margin-right: 15px;
+}
+
+.prev {
+  margin-right: 3px;
+}
+
+.button {
+  padding: 5px 15px;
+
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+
+  color: #fff;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.3);
+
+  font-size: 12px;
+
+  filter: grayscale(100%);
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+img {
+  width: 100%;
+
+  transition: all 0.3s ease;
+
+  border-radius: 50px;
+}
+
+img:hover {
+  transform: translateY(10px);
+
+  opacity: 0.8;
+}
+
+.item {
+  float: left;
+  margin-left: 20px;
+  box-sizing: border-box;
+  width: 450px;
+  max-width: 100%;
+  padding: 30px 50px;
+
+  transition: background-color 1s ease;
+}
+
+.item__text {
+  position: relative;
+  z-index: 10;
+
+  padding: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vh auto;
+  width: 80vw;
+  height: 50px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.content_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 50px;
+  font-size: 20px;
+  color: green;
+  text-decoration: none;
+}
+
+.profile_section {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_image {
+  width: 10vw;
+  height: 25vh;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_image {
+  width: 10vw;
+  justify-content: center;
+  margin: auto;
+}
+
+.mbti {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120vw;
+  margin-left: 40px;
+}
+
+.bio_text {
+  margin-right: 10px;
+}

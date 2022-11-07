@@ -32,15 +32,24 @@ async function handleAuthorization() {
         movie_wrap.style.flexDirection = "column"
         movies.appendChild(movie_wrap)
 
+        const movie_title = document.createElement("p")
+        movie_title.innerText = element.title
+        movie_title.style.textAlign = "center"
+        movie_title.style.padding = 0
+        movie_wrap.appendChild(movie_title)
+
         const movie_button = document.createElement("button")
         movie_button.style.border = 0
         movie_button.style.background = "none"
+        movie_button.style.margin = 0
         movie_wrap.appendChild(movie_button)
 
         const newMovie = document.createElement("img")
-        newMovie.style.width = "100%"
+        // newMovie.style.width = "100%"
         newMovie.src = element.poster
         newMovie.style.borderRadius = "10px"
+        newMovie.style.height = "70%"
+        newMovie.style.objectFit = "cover"
         movie_button.appendChild(newMovie)
 
         const like_button = document.createElement("button")

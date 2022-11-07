@@ -56,6 +56,7 @@ img:hover {
 }
 
 .list {
+
   background-color: white;
   border-radius: 10px;
   width: auto;
@@ -86,13 +87,13 @@ img:hover {
 
 #profile_img {
   border-radius: 50%;
-  width : 10%;
+  width: 10%;
   display: block;
   margin: 20px auto;
 }
 
 #mbti {
-text-align: center;
+  text-align: center;
   font-size: 20px;
 }
 
@@ -100,7 +101,7 @@ text-align: center;
 
   text-align: center;
   font-size: 20px;
-  color: rgb(131, 166, 200);
+  color: rgb(116, 192, 234);
 }
 
 .bio_text {
@@ -167,7 +168,6 @@ a {
   /* position: absolute; */
   top: 25px;
   left: 0;
-  background-color: white;
   border-radius: 10px;
   color: black;
   text-align: center;
@@ -175,31 +175,11 @@ a {
   margin-top: 50px;
 }
 
-.title-area {
-  display: flex;
-  justify-content: space-around;
-  height: 30px;
-  margin-left: 300px;
-  color: black;
-}
-
 .user {
   display: flex;
   justify-content: end;
 }
 
-.text-area {
-  float: left;
-  margin-left: 60px;
-  box-sizing: border-box;
-  width: 90vw;
-  max-width: 100%;
-  margin-top: 50px;
-  position: relative;
-  color: black;
-  border: 1px solid gray;
-  border-radius: 50px;
-}
 
 #title_area {
   float: left;
@@ -220,13 +200,14 @@ a {
 }
 
 #item {
+  background-color: white;
   color: black;
   padding: 15px;
   /* display: flex; */
   display: grid;
   grid-template-columns: repeat(4, minmax(auto, 25%));
   grid-template-rows: repeat(4, 1fr);
-  width: 90%;
+  width: 100%;
   gap: 15px;
   margin: auto;
   grid-area: main;
@@ -286,12 +267,12 @@ p {
   width: 80%;
 }
 
-button{
+button {
   text-align: center;
   background: white;
   color: rgb(85, 85, 85);
   border-radius: 10px;
-  border : 1px solid #bcdee7;
+  border: 1px solid #bcdee7;
   font-size: 14px;
   font-weight: 600;
   line-height: 28px;
@@ -302,12 +283,47 @@ button{
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background: #bcdee7;
-  color : black;
+  color: black;
 }
+
+#tab2,
+#tab3{
+  margin: auto;
+  padding: 3% 0;
+}
+
+.article_box, .comment_box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.article_title {
+  text-align: center
+}
+
+.article_content, .comment_article{
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+}
+
+.cont_area{
+  border-radius: 10px;
+  width : 90%;
+  margin : auto;
+}
+
 #tab4{
-  width: 90%;
   margin:auto;
-  padding : 3% 0;
+  padding: 3% 0;
+  background-color: white;
+}
+
+.link:hover{
+  font-weight: bolder;
+  color :rgb(116, 192, 234);
 }

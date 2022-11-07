@@ -121,6 +121,44 @@ async function handleAuthorization() {
     person.appendChild(mbti)
   })
 
+  //내가 쓴 게시글 연동
+  const articles = document.getElementById("tab2");
+
+  response_json.article_set.forEach(article => {
+    const article_box = document.createElement("div")
+    article_box.classList.add("article_box")
+    articles.appendChild(article_box)
+
+    const article_title = document.createElement("h5")
+    article_title.innerText = article.title
+    article_box.appendChild(article_title)
+
+    const article_content = document.createElement("p")
+    article_content.innerText = article.content
+    article_box.appendChild(article_content)
+  })
+
+  //내가 쓴 코멘트 연동
+  const comments = document.getElementById("tab3");
+
+  response_json.comment_set.forEach(comment => {
+    const comment_box = document.createElement("div")
+    comment_box.classList.add("comment_box")
+    comments.appendChild(comment_box)
+
+    const article_link = document.createElement("a")
+    article_link.href = "#"
+    article_link.innerText = "click me!"
+    article_link.classList.add("link")
+    article_link.onclick = `to_article_detail(${comment.article})`
+    comment_box.appendChild(article_link)
+
+    const comment_content = document.createElement("p")
+    comment_content.innerText = comment.content
+    article_link.appendChild(comment_content)
+  })
+  
+
 
 
 

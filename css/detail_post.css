@@ -1,0 +1,155 @@
+body {
+    background: #f8f8f8;
+}
+
+
+.post_form {
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    margin: 10vh auto 0 auto;
+    width: 50vw;
+}
+
+.post_form .title {
+    margin: 0 10px 40px;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.post_form .preview {
+    margin-bottom: 30px;
+}
+
+.post_form .preview .upload {
+    max-width: 300px;
+    height: 300px;
+    border: 1px solid #e6e6e6;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+
+.post_form p {
+    margin-bottom: 20px;
+}
+
+.post_form input[type=file] {
+    width: 100%;
+    background: 0 0;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #262626;
+    font-size: 14px;
+    padding: 7px 8px 7px;
+}
+
+
+.post_form textarea {
+    width: 100%;
+    background: 0 0;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #262626;
+    font-size: 14px;
+    padding: 7px 8px 7px;
+}
+
+
+
+.submit_btn {
+    background: #ffcbcb;
+    border-color: #000000;
+    color: black;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    outline: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+    margin: 5px;
+    cursor: pointer
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#comment_box {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.comment_btn {
+    background: #ffcbcb;
+    border-color: #000000;
+    color: black;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    outline: none;
+    width: 15%;
+    height: 20%;
+    padding: 0;
+    margin-top: 10px;
+    margin: 5px;
+    cursor:pointer;
+}
+
+.comment_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.material-symbols-rounded {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+.filebox label {
+    display: inline-block;
+    padding: .5em .75em;
+    color: black;
+    font-size: inherit;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: pink;
+    cursor: pointer;
+    border: 1px solid pink;
+    border-bottom-color: #e2e2e2;
+    border-radius: .25em;
+  }
+
+
+
+.filebox input[type="submit"] {  
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+.filebox label:hover{
+    border:2px solid gray;
+}
+
+  

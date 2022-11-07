@@ -21,18 +21,20 @@ async function handleAuthorization() {
     console.log(response_json)
 
     for(let i = response_json.length -1; i >= 0; i--){
+
         const feed = document.createElement("div")
-        feed.innerHTML=`
-        <div class="card" id="card">
+        feed.innerHTML=
+        `<div class="card" id="card">
+        
         <div class="card-header"id="title">${response_json[i].title}</div>
         <div class="card-body">
         <p class="card-text" id="context">${response_json[i].content}</p>
+        <div id= "look" onclick="to_article_detail(${response_json[i].id})" class="btn btn-primary">${'자세히보기'}</div>
         <div class = "buttons${i}", id = "buttons${i}" >
         <a onclick="to_edit_article(${response_json[i].id})" class="btn btn-primary">${'수정'}</a>
         <a onclick="delete_post(${response_json[i].id})" class="btn btn-primary">${'삭제'}</a>
         </div>
-        </div>
-        `;
+        </div>`;
         document.querySelector(".row").append(feed)
 
         const abc = document.getElementById(`buttons${i}`);

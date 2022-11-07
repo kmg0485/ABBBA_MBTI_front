@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-        <title>MBTI 회원가입</title>
-        <link rel="stylesheet" href="css/sign.css">
-        <script src="javascript/sign.js"></script>
-        <script src="javascript/path.js"></script>
-    </head>
+    <title>MBTI 회원가입</title>
+    <script>
+        function forbid() {
+            const storge = localStorage.getItem("payload");
+            if (storge) {
+                alert("이미 로그인 중이십니다.")
+                window.location.replace(history.back())
+            }
+        }
+        forbid()
+    </script>
+    <link rel="stylesheet" href="css/sign.css">
+    <script src="javascript/sign.js"></script>
+    <script src="javascript/path.js"></script>
+</head>
 
-    <body>
+<body>
 
-            <div id="main_container">
-                <div class="form_container">
-                    <div class="form">
-                        <h1 style="text-align: center;
+    <div id="main_container">
+        <div class="form_container">
+            <div class="form">
+                <h1 style="text-align: center;
                         padding : 0 0 15px 0;">회원가입 페이지</h1>
-                        <form>
-                            <p>
-                                <input type="text"id="nickname" placeholder="아이디 겸 닉네임">
-                            </p>
-                            <p>
-                                <input type="password" placeholder="비밀번호" id="password">
-                            </p>
-                            <p>
-                                <input type="password" placeholder="비밀번호 확인" id="password_check">
-                            </p>
+                <form>
+                    <p>
+                        <input type="text" id="nickname" placeholder="아이디 겸 닉네임">
+                    </p>
+                    <p>
+                        <input type="password" placeholder="비밀번호" id="password">
+                    </p>
+                    <p>
+                        <input type="password" placeholder="비밀번호 확인" id="password_check">
+                    </p>
 
-                            <button onclick="handleSignup(); to_signin();" type="button"class="submit_btn">회원가입</button>
-                        </form>
-                    </div>
-                </div>
+                    <button onclick="handleSignup(); to_signin();" type="button" class="submit_btn">회원가입</button>
+                </form>
             </div>
-    </body>
+        </div>
+    </div>
+</body>
 
 </html>

@@ -16,6 +16,19 @@
   <script src="javascript/path.js "></script>
   <!-- <script src="javascript/box-shadow.js" async></script> -->
   <title>profile</title>
+  <script>
+    function forbid() {
+        const storge = localStorage.getItem("payload");
+        if (storge) {
+            pass
+        }
+        else{
+            alert("로그인 해주세요.")
+            window.location.href="signin.html"
+        }
+    }
+    forbid()
+</script>
 </head>
 
 <body>

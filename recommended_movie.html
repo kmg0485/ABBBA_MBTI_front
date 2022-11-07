@@ -11,6 +11,19 @@
   <meta charset="UTF-8" />
 
   <title>영화 페이지</title>
+  <script>
+    function forbid() {
+        const storge = localStorage.getItem("payload");
+        if (storge) {
+            pass
+        }
+        else{
+            alert("로그인 해주세요.")
+            window.location.href="signin.html"
+        }
+    }
+    forbid()
+</script>
   <link rel="stylesheet" href="css/movie_list.css">
   <script src="javascript/recommended_movie.js"></script>
     

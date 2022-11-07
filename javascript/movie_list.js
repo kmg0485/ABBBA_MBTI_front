@@ -61,7 +61,7 @@ async function handleAuthorization() {
 
         const like = document.createElement("img")
         like.style.width = "20px";
-       
+        
         like.classList.add("heart");
         like.style.margin = "auto"
         // console.log(`user : ${payload_parse.user_id}, likes=${element.likes}`)

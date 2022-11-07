@@ -103,6 +103,7 @@ async function handleAuthorization() {
   if (response_json.profile_img) {
  
       profile_img.src = "http://127.0.0.1:8000" + response_json.profile_img
+      
   }
 }
 

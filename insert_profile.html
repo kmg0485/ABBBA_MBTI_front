@@ -28,11 +28,11 @@
     <aside class="profile-card">
         <div id="head-wrap">
             <div class="upload">
-                <input type="file" accept="image/*"onchange="previewImage(this)" id="realupload" required class="real-upload">
+                <input  type="file" accept="image/*"onchange="previewImage(this)" id="realupload" required class="real-upload">
                 <img src="https://cdn-icons-png.flaticon.com/512/5175/5175601.png">
             </div>
             <header>
-                <img id="profile_image">
+                <img  onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'" src="" id="profile_image">
                 <!-- the username -->
                 <h1 id="nickname">닉네임 자리</h1>
 

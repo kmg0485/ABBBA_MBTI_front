@@ -263,3 +263,11 @@ border-bottom-right-radius: 0;
         opacity: 1;
     }
 }
+
+.follower_image{
+    margin :auto;
+    width : 10%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+}

@@ -8,7 +8,9 @@ async function post() {
             'content-type':'application/json',
             "authorization" : "Bearer " + localStorage.getItem("access")
         },
+        
         method:'post',
+
         body: JSON.stringify({
             "title":title,
             "content":content,

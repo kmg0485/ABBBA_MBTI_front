@@ -19,12 +19,13 @@
                 <div class="circle">
                     <a onclick="to_mbti_detail();" style="cursor: pointer;"><p id="mbti">MBTI</p></a>
                 </div>
-                <p style="font-size: 30px; text-align: center; padding : 0 0 15px 0;">추천 목록</p>                 
+                <p style="font-size: 30px; text-align: center; padding : 0 0 15px 0;">- 추천 목록 -</p>                 
                 <div id="buttons">
                     <button onclick="to_recommended_movies();" type="button" class="submit_btn">영화 추천</button>
                     <button onclick="to_friends();" type="button" class="submit_btn">친구 추천</button>
-                    <button onclick="to_mbti_menu();" type="button" class="submit_btn">커뮤니티</button>
+                    <button onclick="to_articles();" type="button" class="submit_btn">커뮤니티</button>
                     <button onclick="to_profile();" type="button" class="submit_btn">프로필 보기</button>
+                    <button onclick="handleLogout(),to_signin();" type="button" class="submit_btn">로그아웃</button>
                 </div>                               
             </div>
         </div>

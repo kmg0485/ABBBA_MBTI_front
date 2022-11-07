@@ -20,26 +20,25 @@
   <nav>
     <div id="greeting"></div>
     <div>
-      <a  href="#"><button style="border-radius:20px;" class="btn btn-outline-danger"
-          type="submit">UPLOAD</button></a>
+      <a  href="#"><button style="border-radius:20px;" onclick="to_main()" class="btn btn-outline-danger"
+          type="button">MAIN</button></a>
     </div>
-    <div>
-      <a href=#> <button style="border-radius:20px;" class="btn btn-outline-danger"
-          type="button" onclick="handleLogout()">LOGOUT</button></a>
-
-    </div>
+    
+    <button style="border-radius: 20px;" onclick="to_recommended_movies()" class="btn btn-outline-danger" type="button">영화추천</button>
     <form class="d-flex">
-      <input style="border-radius: 20px;" class="form-control me-2" type="search" placeholder="Search"
-        name="search" aria-label="Search" style="width: 800px" />
-      <button style="border-radius: 20px;" class="btn btn-outline-danger" type="submit">SEARCH</button>
+      <button style="border-radius: 20px;" onclick="to_friends()" class="btn btn-outline-danger" type="button">친구추천</button>
     </form>
-
+    <div>
+      <a> <button style="border-radius:20px;" class="btn btn-outline-danger"
+          type="button" onclick="handleLogout(),to_signin()">LOGOUT</button></a>
+          
+    </div>
 
   </nav>
   <div id="container">
 
   </div>
-
+  <script src="javascript/path.js"></script>
 </body>
 
 </html>

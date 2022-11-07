@@ -20,25 +20,21 @@
   <nav>
     <div id="greeting"></div>
     <div>
-      <a  href="#"><button style="border-radius:20px;" class="btn btn-outline-danger"
-          type="submit">UPLOAD</button></a>
+      <a  href="#"><button onclick="to_main()" style="border-radius:20px;" class="btn btn-outline-danger"
+          type="submit">HOME</button></a>
     </div>
     <div>
       <a href=#> <button style="border-radius:20px;" class="btn btn-outline-danger"
-          type="button" onclick="handleLogout()">LOGOUT</button></a>
+          type="button" onclick="handleLogout(),to_signin()">LOGOUT</button></a>
 
     </div>
-    <form class="d-flex">
-      <input style="border-radius: 20px;" class="form-control me-2" type="search" placeholder="Search"
-        name="search" aria-label="Search" style="width: 800px" />
-      <button style="border-radius: 20px;" class="btn btn-outline-danger" type="submit">SEARCH</button>
-    </form>
+    
 
 
   </nav>
   <div id="container">
   </div>
-
+  <script src="javascript/path.js"></script>
 </body>
 
 </html>

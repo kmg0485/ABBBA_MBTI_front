@@ -1,9 +1,12 @@
-
+body{
+  background-color: #bcdee7;
+}
   nav {
     grid-area: header;
-    border: 1px solid #27E0AC;;
+    background-color: white;
+    border: 1px solid #000000;;
     border-radius: 20px;
-    width: 80vw;
+    width: 60vw;
     margin: 5vh auto;
     display: flex;
     flex-wrap: inherit;
@@ -15,14 +18,7 @@
     flex-wrap: wrap;
   }
   
-  #button {
-    background-color:#27e0ac;
-    height:50px;
-}
-  .button:hover{
-    background-color:#27e0ac;
-    color:white;
-  }
+  
  
 
 .card{
@@ -39,7 +35,4 @@
     width:1000px;
 }
 
-#look{
-  margin-bottom: 10px;
-}
 

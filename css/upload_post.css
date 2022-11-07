@@ -42,7 +42,7 @@ body {
     font-weight: 400;
     font-size: 30px;
     text-align: center;
-    color: #27e0ac;
+    color:  #bcdee7;
   }
 
   .plus_icon {
@@ -96,12 +96,10 @@ body {
   }
 
   .submit_btn {
-    background: #27e0ac;
-    border-color: #000000;
+    background:  #bcdee7;
+    border : 1px solid  #bcdee7;
     color: black;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px;
+ 
     font-size: 14px;
     font-weight: 600;
     line-height: 28px;

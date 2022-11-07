@@ -42,28 +42,10 @@ body {
     font-weight: 400;
     font-size: 30px;
     text-align: center;
-    color: #27e0ac;
+    color: #bcdee7;
   }
 
-  .plus_icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-    border: 1px solid #ffcbcb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50%;
-  }
 
-  .plus_icon span {
-    position: absolute;
-    display: block;
-    width: 2px;
-    height: 30px;
-    background: #ffcbcb;
-  }
 
   .plus_icon span:nth-child(2) {
     transform: rotate(90deg);
@@ -73,16 +55,7 @@ body {
     margin-bottom: 20px;
   }
 
-  .post_form input[type="file"] {
-    width: 100%;
-    background: 0 0;
-    border: 1px solid #efefef;
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: #262626;
-    font-size: 14px;
-    padding: 7px 8px 7px;
-  }
+
 
   .post_form textarea {
     width: 100%;
@@ -96,9 +69,7 @@ body {
   }
 
   .submit_btn {
-    background: #27e0ac;
-    border-color: #000000;
-    color: black;
+    background: #bcdee7;
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
@@ -111,22 +82,6 @@ body {
     margin-top: 10px;
     margin: 5px;
     cursor: pointer;
-    
-  }
-  .submit_btn:hover {
-    border-color: #000000;
-    color: black;
-    border-width: 2px;
-    border-radius: 3px;
-    border-style: solid;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 28px;
-    outline: none;
-    width: 100%;
-    padding: 0;
-    margin-top: 10px;
-    margin: 5px;
-    cursor: pointer;
+    border:none;
     
   }

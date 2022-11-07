@@ -241,6 +241,10 @@ p {
 
 #left {
   border-right: 1px solid gray;
+  width : 50%;
+}
+#right{
+  width:50%;
 }
 
 #item>div:nth-child(1) {

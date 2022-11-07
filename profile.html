@@ -20,7 +20,6 @@
     function forbid() {
         const storge = localStorage.getItem("payload");
         if (storge) {
-            pass
         }
         else{
             alert("로그인 해주세요.")
@@ -49,7 +48,7 @@
       <h5 id="nickname" name="nickname"></h5>
       <div id="mbti" name="mbti"></div>
 
-      <img id="profile_img" name="profile_img" src="" />
+      <img id="profile_img"  onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'" name="profile_img" src="" />
       <div id="bio" name="bio"></div>
 
     </div>

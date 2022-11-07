@@ -42,13 +42,9 @@ console.log(response_json)
         people.appendChild(wrappingDiv)
 
         const image = document.createElement("img")
-        image.src ="http://127.0.0.1:8000/" +  person.profile_img
-        image.style.margin = "auto";
-        image.style.width = "10%";
-        image.style.aspectRatio = "1/1";
-        image.style.borderRadius = "50%";
-        image.style.objectFit = "cover";
-        wrappingDiv.appendChild(image)
+
+        wrappingDiv.innerHTML = `<img src="http://127.0.0.1:8000/${person.profile_img}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'" class="follower_image">`
+ 
 
         const list = document.createElement("h3")
         list.style.width = "70%";
@@ -106,7 +102,9 @@ async function handleRecommend() {
         people.appendChild(wrappingDiv)
 
         const image = document.createElement("img")
+
         image.src ="http://127.0.0.1:8000/" +  person.profile_img
+        image.onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'"
         image.style.margin = "auto";
         image.style.width = "10%";
         image.style.aspectRatio = "1/1";

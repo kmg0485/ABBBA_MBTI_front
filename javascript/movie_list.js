@@ -26,7 +26,7 @@ async function handleAuthorization() {
     newMovieLink.href = "#";
     movies.appendChild(newMovieLink);
     const newMovie = document.createElement("img");
-    newMovie.src = "/Users/lgb/Desktop/ABBBA_MBTI" + element.poster;
+    newMovie.src = element.poster;
     newMovieLink.appendChild(newMovie);
   });
 }

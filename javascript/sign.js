@@ -1,6 +1,4 @@
-window.onload = () => {
-    console.log("자스 파일 연결!")
-}
+
 
 async function handleSignup() {
     const nickname = document.getElementById("nickname").value
@@ -51,6 +49,7 @@ async function handleLogin(){
 
     localStorage.setItem("payload", jsonPayload);
     alert("로그인이 완료되었습니다!")
+    location.href="friends.html"
 }
 
 function handleLogout(){

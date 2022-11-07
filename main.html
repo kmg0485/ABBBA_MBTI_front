@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI Main</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="javascript/sign.js"></script>
+    <script src="javascript/path.js"></script>
+    <script src="javascript/mbti.js"></script>
+</head>
+
+<body>
+    <div id="main_container">
+        <div class="form_container">
+            <div class="form"> 
+                <div class="circle">
+                    <a onclick="to_mbti_detail();" style="cursor: pointer;"><p id="mbti">MBTI</p></a>
+                </div>
+                <p style="font-size: 30px; text-align: center; padding : 0 0 15px 0;">추천 목록</p>                 
+                <div id="buttons">
+                    <button onclick="to_recommended_movies();" type="button" class="submit_btn">영화 추천</button>
+                    <button onclick="to_friends();" type="button" class="submit_btn">친구 추천</button>
+                    <button onclick="to_mbti_menu();" type="button" class="submit_btn">커뮤니티</button>
+                    <button onclick="to_profile();" type="button" class="submit_btn">프로필 보기</button>
+                </div>                               
+            </div>
+        </div>
+    </div>
+</body>

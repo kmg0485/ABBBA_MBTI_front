@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI Detail</title>
+    <link rel="stylesheet" href="css/mbti_detail.css">
+    <script src="javascript/sign.js"></script>
+    <script src="javascript/path.js"></script>
+    <script src="javascript/mbti.js"></script>
+</head>
+
+<body>
+    <div id="main_container">
+        <div class="circle">
+            <p id="mbti">MBTI</p>
+        </div>
+        <div class="container my-5">
+            <div class="bg-light p-5 rounded">
+                <div class="col-sm-8 py-5 mx-auto">
+                    <h1 class="display-5 fw-normal">당신은 <span id="title">성격유형자리 </span>이군요!</h1>
+                    <p class="fs-5"><span id="detail">여기는 MBTI 설명 자리입니다.</span>
+                    <p>
+                        <a class="btn btn-primary" href="https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95" role="button">더 자세한 내용을 확인하시려면»</a>
+                    </p>
+                </div>
+            </div>
+        </div>        
+        <div id="buttons">
+            <button onclick="to_main();" type="button" class="submit_btn">메인 페이지</button>
+        </div>                               
+    </div>
+</body>

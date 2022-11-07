@@ -13,6 +13,7 @@
   <title>영화 페이지</title>
   <link rel="stylesheet" href="css/movie_list.css">
   <script src="javascript/movie_list.js"></script>
+  <script src="javascript/path.js"></script>
     
 </head>
 
@@ -21,7 +22,7 @@
     <div id="greeting"></div>
     <div>
       <a  href="#"><button style="border-radius:20px;" class="btn btn-outline-danger"
-          type="submit">UPLOAD</button></a>
+          type="button" onclick="to_recommended_movies()">영화 추천 보기</button></a>
     </div>
     <div>
       <a href=#> <button style="border-radius:20px;" class="btn btn-outline-danger"
@@ -33,7 +34,11 @@
         name="search" aria-label="Search" style="width: 800px" />
       <button style="border-radius: 20px;" class="btn btn-outline-danger" type="submit">SEARCH</button>
     </form>
+    <div>
+      <a href=#> <button style="border-radius:20px;" class="btn btn-outline-danger"
+          type="button" onclick="to_main()">HOME</button></a>
 
+    </div>
 
   </nav>
   <div id="container">

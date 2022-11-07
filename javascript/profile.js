@@ -80,8 +80,7 @@ async function handleAuthorization() {
     const button = document.createElement("button")
     button.style.height = "80%"
     button.style.margin = "auto"
-    button.classList.add("btn")
-    button.classList.add("btn-outline-danger")
+    button.style.width = "25%"
     button.innerText = "UNFOLLOW"
     button.onclick = function () {
         

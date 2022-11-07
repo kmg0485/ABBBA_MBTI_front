@@ -47,6 +47,7 @@ async function handleAuthorization() {
         const newMovie = document.createElement("img")
         // newMovie.style.width = "100%"
         newMovie.src = element.poster
+       
         newMovie.style.borderRadius = "10px"
         newMovie.style.height = "70%"
         newMovie.style.objectFit = "cover"
@@ -60,6 +61,7 @@ async function handleAuthorization() {
 
         const like = document.createElement("img")
         like.style.width = "20px";
+       
         like.classList.add("heart");
         like.style.margin = "auto"
         // console.log(`user : ${payload_parse.user_id}, likes=${element.likes}`)

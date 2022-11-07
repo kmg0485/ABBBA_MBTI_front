@@ -41,6 +41,7 @@ async function handleAuthorization() {
     const poster = document.createElement("img");
     poster.src = movie.poster;
     poster.classList.add("rec_movie");
+
     movie_set.appendChild(poster);
   });
 
@@ -65,6 +66,7 @@ async function handleAuthorization() {
 
     const image = document.createElement("img")
     image.style.width = "7%"
+
     image.src = "http://127.0.0.1:8000" + following.profile_img
     person.appendChild(image)
 
@@ -80,27 +82,27 @@ async function handleAuthorization() {
     button.style.height = "80%"
     button.style.margin = "auto"
     button.style.width = "25%"
-    button.innerText = "UNFOLLOW"
+    button.innerText = "언팔"
     button.onclick = function () {
-        
+
       const id = following.id
       fetch(`http://127.0.0.1:8000/users/follow/${id}/`, {
-          headers: {
-              "authorization": "Bearer " + localStorage.getItem("access")
-          },
-          method: 'POST',
-          body: {}
+        headers: {
+          "authorization": "Bearer " + localStorage.getItem("access")
+        },
+        method: 'POST',
+        body: {}
       })
       alert("언팔로우!")
       window.location.reload()
-  }
+    }
     person.appendChild(button)
 
   })
 
   response_json.followers.forEach(follower => {
     // 팔로워 리스트 연동
-    
+
 
     const person = document.createElement("div")
     person.classList.add("person")
@@ -157,7 +159,7 @@ async function handleAuthorization() {
     comment_content.innerText = comment.content
     article_link.appendChild(comment_content)
   })
-  
+
 
 
 

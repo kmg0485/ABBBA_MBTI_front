@@ -42,6 +42,7 @@ console.log(response_json)
         people.appendChild(wrappingDiv)
 
         const image = document.createElement("img")
+      
         image.src ="http://127.0.0.1:8000/" +  person.profile_img
         image.style.margin = "auto";
         image.style.width = "10%";
@@ -106,6 +107,7 @@ async function handleRecommend() {
         people.appendChild(wrappingDiv)
 
         const image = document.createElement("img")
+
         image.src ="http://127.0.0.1:8000/" +  person.profile_img
         image.style.margin = "auto";
         image.style.width = "10%";

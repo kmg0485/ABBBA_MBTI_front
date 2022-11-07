@@ -13,26 +13,10 @@ body {
 
 
 
-.post_form textarea {
-    width: 100%;
-    background: 0 0;
-    border: 1px solid #efefef;
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: #262626;
-    font-size: 14px;
-    padding: 7px 8px 7px;
-}
-
-
-
 .submit_btn {
     background: #ffcbcb;
-    border-color: #000000;
     color: black;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid #ffcbcb;
     font-size: 14px;
     font-weight: 600;
     line-height: 28px;
@@ -41,7 +25,8 @@ body {
     padding: 0;
     margin-top: 10px;
     margin: 5px;
-    cursor: pointer
+    cursor: pointer;
+    border-radius : 5px;
 }
 
 .buttons {
@@ -57,11 +42,9 @@ body {
 
 .comment_btn {
     background: #ffcbcb;
-    border-color: #000000;
     color: black;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid #ffcbcb;
+    border-radius : 5px;
     font-size: 14px;
     font-weight: 600;
     line-height: 28px;
@@ -83,38 +66,12 @@ body {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
-.filebox label {
-    display: inline-block;
-    padding: .5em .75em;
-    color: black;
-    font-size: inherit;
-    line-height: normal;
-    vertical-align: middle;
-    background-color: pink;
-    cursor: pointer;
-    border: 1px solid pink;
-    border-bottom-color: #e2e2e2;
-    border-radius: .25em;
+
+.row {
+    width: 100%;
 }
-
-
-
-.filebox input[type="submit"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-.filebox label:hover {
-    border: 2px solid gray;
-}
-
-
-.row{
-    width:100%;
+#home_button{
+    display: flex;
+    justify-content: center;
+    cursor : pointer;
 }

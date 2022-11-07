@@ -2,7 +2,7 @@ const article_id = localStorage.getItem("article_id");
 window.onload = () => {
     post(article_id)
  }
- 
+
  async function post(article_id) {
     const payload = localStorage.getItem("payload");
     const payload_parse = JSON.parse(payload)
@@ -18,11 +18,14 @@ window.onload = () => {
     })
 
     response_json = await response.json()
-    console.log(response_json);
     title.innerText = response_json.title;
     content.innerText = response_json.content;
     const comment_set = response_json.comment_set;
 
+    if (user_id != response_json.user){
+        buttons.style.display='none';
+      }
+      
     for(let i = comment_set.length -1; i >= 0; i--){
         const feed = document.createElement("div")
         feed.innerHTML=
@@ -87,3 +90,5 @@ async function delete_post(id) {
     console.log(response)
     location.href = "articles.html"
 }
+
+

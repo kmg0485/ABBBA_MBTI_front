@@ -28,7 +28,7 @@ console.log(response_json)
     bio.innerText = response_json.bio
     email.innerText = response_json.email
     mbti.innerText = response_json.mbti
-    image.src = "http://127.0.0.1:8000/" + response_json.profile_img
+    image.src = "http://127.0.0.1:8000" + response_json.profile_img
 
     // 팔로워 목록 띄우기
     const people = document.getElementById("followings")

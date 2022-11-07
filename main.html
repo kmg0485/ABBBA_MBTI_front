@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBTI Main</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="javascript/sign.js"></script>
     <script src="javascript/path.js"></script>
     <script src="javascript/mbti.js"></script>
 </head>
@@ -17,7 +17,7 @@
         <div class="form_container">
             <div class="form"> 
                 <div class="circle">
-                    <p id="mbti"><a onclick="to_mbti_detail();" style="cursor: pointer;">MBTI</a></p>
+                    <a onclick="to_mbti_detail();" style="cursor: pointer;"><p id="mbti">MBTI</p></a>
                 </div>
                 <p style="font-size: 30px; text-align: center; padding : 0 0 15px 0;">추천 목록</p>                 
                 <div id="buttons">

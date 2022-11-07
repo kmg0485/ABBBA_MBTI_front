@@ -1,3 +1,5 @@
+
+
 async function handleSignup() {
     const nickname = document.getElementById("nickname").value
     const password = document.getElementById("password").value
@@ -47,6 +49,7 @@ async function handleLogin(){
 
     localStorage.setItem("payload", jsonPayload);
     alert("로그인이 완료되었습니다!")
+    location.href="friends.html"
 }
 
 function handleLogout(){

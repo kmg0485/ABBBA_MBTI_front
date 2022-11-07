@@ -44,9 +44,14 @@ function to_mbti_detail() {
     location.href = "mbti_detail.html"
 }
 
-// 프로필 입력창으로 이동, 생성 및 수정
+// 프로필 입력창으로 이동
 function to_insert_profile() {
     location.href = "insert_profile.html"
+}
+
+// 프로필 수정창으로 이동
+function to_edit_profile() {
+    location.href = "edit_profile.html"
 }
 
 // 친구 추천 페이지로 이동

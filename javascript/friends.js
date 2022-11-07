@@ -28,7 +28,7 @@ console.log(response_json)
     bio.innerText = response_json.bio
     email.innerText = response_json.email
     mbti.innerText = response_json.mbti
-    image.src = "/Users/lgb/Desktop/ABBBA_MBTI" + response_json.profile_img
+    image.src = "http://127.0.0.1:8000/" + response_json.profile_img
 
     // 팔로워 목록 띄우기
     const people = document.getElementById("followings")
@@ -42,7 +42,7 @@ console.log(response_json)
         people.appendChild(wrappingDiv)
 
         const image = document.createElement("img")
-        image.src =person.profile_img.url
+        image.src ="http://127.0.0.1:8000/" +  person.profile_img
         image.style.margin = "auto";
         image.style.width = "10%";
         image.style.aspectRatio = "1/1";
@@ -66,11 +66,10 @@ console.log(response_json)
         const unfollow = document.createElement("button")
         unfollow.type = "button";
         unfollow.classList.add("submit_btn");
-        unfollow.innerHTML = "FOLLOW"
+        unfollow.innerHTML = "UNFOLLOW"
         unfollow.onclick = function () {
         
         const id = person.id
-        alert(id)
         fetch(`http://127.0.0.1:8000/users/follow/${id}/`, {
             headers: {
                 "authorization": "Bearer " + localStorage.getItem("access")
@@ -78,7 +77,7 @@ console.log(response_json)
             method: 'POST',
             body: {}
         })
-        alert("팔로우 성공!")
+        alert("언팔로우!")
         window.location.reload()
     }
         wrappingDiv.appendChild(unfollow)
@@ -107,7 +106,7 @@ async function handleRecommend() {
         people.appendChild(wrappingDiv)
 
         const image = document.createElement("img")
-        image.src =person.profile_img.url
+        image.src ="http://127.0.0.1:8000/" +  person.profile_img
         image.style.margin = "auto";
         image.style.width = "10%";
         image.style.aspectRatio = "1/1";
@@ -135,7 +134,6 @@ async function handleRecommend() {
         unfollow.onclick = function () {
         
         const id = person.id
-        alert(id)
         fetch(`http://127.0.0.1:8000/users/follow/${id}/`, {
             headers: {
                 "authorization": "Bearer " + localStorage.getItem("access")

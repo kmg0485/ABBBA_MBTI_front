@@ -52,16 +52,15 @@ async function handleAuthorization() {
         const like = document.createElement("img")
         like.style.width = "20px";
         like.classList.add("heart");
+        like.style.margin = "auto"
         // console.log(`user : ${payload_parse.user_id}, likes=${element.likes}`)
         if (element.likes.includes(payload_parse.user_id)){
             like.src = full_heart}
         else {
             like.src = empty_heart
         }
-        like.style.margin = "auto"
         like_button.onclick = function () {
             if (document.querySelector(".heart").classList.contains("empty_heart")) {
-                console.log("True")
                 fetch(`http://127.0.0.1:8000/movies/${element.movie_id}/likes/`, {
                     headers: {
                         "authorization": "Bearer " + localStorage.getItem("access")

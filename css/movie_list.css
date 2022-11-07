@@ -79,3 +79,15 @@ a:hover {
 button{
   background-color: #dc3545;
 }
+
+
+/* 추천 영화 페이지 */
+
+.rec_movie {
+  width:100%;
+}
+
+.movie_title{
+  text-align: center;
+  font-size: 15px;
+}

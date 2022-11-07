@@ -49,7 +49,27 @@ async function handleLogin() {
 
     localStorage.setItem("payload", jsonPayload);
     alert("로그인이 완료되었습니다!")
-    location.href = "insert_profile.html"
+
+    console.log(jsonPayload)
+
+    const Response = await fetch("http://127.0.0.1:8000/users/profile/", {
+      headers: {
+          "authorization": "Bearer " + localStorage.getItem("access")
+      },
+      method: 'GET'
+    })
+    json = await Response.json()
+    console.log(json)
+    
+
+
+    if (json.mbti==""){
+        location.href="insert_profile.html"
+    } else{
+        location.href="main.html"
+    }
+
+
 }
 
 function handleLogout() {
@@ -58,3 +78,4 @@ function handleLogout() {
     localStorage.removeItem("payload")
     alert("로그아웃이 완료되었습니다!")
 }
+

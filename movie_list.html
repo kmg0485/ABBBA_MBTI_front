@@ -35,22 +35,23 @@
   <nav>
     <div id="greeting"></div>
     <div>
-  <button style="border-radius:20px;" class="btn btn-outline-danger"
-          type="button" onclick="to_profile()">PROFILE</button>
+      <a  href="#"><button style="border-radius:20px;" onclick="to_main()" class="btn btn-outline-danger"
+          type="button">MAIN</button></a>
     </div>
+    
+    <button style="border-radius: 20px;" onclick="to_recommended_movies()" class="btn btn-outline-danger" type="button">영화추천</button>
+    <form class="d-flex">
+      <button style="border-radius: 20px;" onclick="to_friends()" class="btn btn-outline-danger" type="button">친구추천</button>
+    </form>
     <div>
-      <a href=#> <button style="border-radius:20px;" class="btn btn-outline-danger"
-          type="button" onclick="handleLogout()">LOGOUT</button></a>
-
+      <a> <button style="border-radius:20px;" class="btn btn-outline-danger"
+          type="button" onclick="handleLogout(),to_signin()">LOGOUT</button></a>
     </div>
-
-    </div>
-
   </nav>
   <div id="container">
 
   </div>
-
+  <script src="javascript/path.js"></script>
 </body>
 
 </html>

@@ -87,7 +87,7 @@ async function insertProfile() {
     const email = document.getElementById("email").value
     const bio = document.getElementById("bio").value
     const mbti = document.getElementById("mbti").value
-    const profile_img = document.getElementById("profile_image").value
+    const profile_img = document.getElementById("real-upload").Files[0]
 
     const response = await fetch('http://127.0.0.1:8000/users/profile/', {
         headers: {
@@ -103,5 +103,5 @@ async function insertProfile() {
         })
     })
     alert("프로필 저장이 완료되었습니다!")
-    console.log(response)
+    location.href = "friend.html"
 }

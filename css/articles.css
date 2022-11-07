@@ -1,0 +1,45 @@
+
+  nav {
+    grid-area: header;
+    border: 1px solid #27E0AC;;
+    border-radius: 20px;
+    width: 80vw;
+    margin: 5vh auto;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  #button {
+    background-color:#27e0ac;
+    height:50px;
+}
+  .button:hover{
+    background-color:#27e0ac;
+    color:white;
+  }
+ 
+
+.card{
+    display:flex;
+    margin:auto;
+    width:1100px;
+    margin-bottom: 20px;
+    }
+
+
+.feed{
+    display:flex;
+    margin-inline:auto;
+    width:1000px;
+}
+
+#look{
+  margin-bottom: 10px;
+}
+

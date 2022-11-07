@@ -26,16 +26,17 @@
             <p>
               <textarea
                 name="content"
-                id="text_field"
+                id="content"
                 cols="50"
                 rows="15"
                 placeholder="수정할 내용을 입력해주세요."
               ></textarea>
             </p>
-            <input class="submit_btn" type="submit"  onclick="EditPost()" value="수정" />
+            <input class="submit_btn" type="button"  onclick="EditPost(article_id),to_articles()" value="수정" />
           </div>
       </div>
     </section>
     <script src="javascript/edit_post.js"></script>
+    <script src="javascript/path.js"></script>
   </body>
 </html>

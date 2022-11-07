@@ -31,7 +31,13 @@ function to_article_detail(id) {
 
 // 게시글 입력 페이지로 이동
 function to_write_article() {
-    location.href = "write_article.html"
+    location.href = "upload_post.html"
+}
+
+// 게시글 수정 페이지로 이동
+function to_edit_article(id) {
+    location.href = "edit_post.html"
+    localStorage.setItem("article_id", id);
 }
 
 // 프로필 페이지로 이동

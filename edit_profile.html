@@ -6,6 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>프로필 편집 페이지</title>
+    <script>
+        function forbid() {
+            const storge = localStorage.getItem("payload");
+            if (storge) {
+                pass
+            }
+            else{
+                alert("로그인 해주세요.")
+                window.location.href="signin.html"
+            }
+        }
+        forbid()
+    </script>
     <link rel="stylesheet" href="css/friends.css">
     <script src="javascript/sign.js"></script>
     <script src="javascript/edit_profile.js"></script>

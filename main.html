@@ -6,6 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBTI Main</title>
+    <script>
+        function forbid() {
+            const storge = localStorage.getItem("payload");
+            if (storge) {
+                pass
+            }
+            else{
+                alert("로그인 해주세요.")
+                window.location.href="signin.html"
+            }
+        }
+        forbid()
+    </script>
     <link rel="stylesheet" href="css/main.css">
     <script src="javascript/sign.js"></script>
     <script src="javascript/path.js"></script>
@@ -21,9 +34,10 @@
                 </div>
                 <p style="font-size: 30px; text-align: center; padding : 0 0 15px 0;">추천 목록</p>                 
                 <div id="buttons">
+                    <button onclick="to_movie_list();" type="button" class="submit_btn">영화 & 친구 추천 받기</button>
                     <button onclick="to_recommended_movies();" type="button" class="submit_btn">영화 추천</button>
                     <button onclick="to_friends();" type="button" class="submit_btn">친구 추천</button>
-                    <button onclick="to_mbti_menu();" type="button" class="submit_btn">커뮤니티</button>
+                    <button onclick="to_community();" type="button" class="submit_btn">커뮤니티</button>
                     <button onclick="to_profile();" type="button" class="submit_btn">프로필 보기</button>
                 </div>                               
             </div>

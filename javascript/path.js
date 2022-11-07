@@ -71,6 +71,11 @@ function to_mbti_menu() {
     location.href = "mbti_menu.html"
 }
 
+// 커뮤니티로 이동
+function to_community() {
+    location.href = "articles.html"
+}
+
 // 추천된 영화 리스트 페이지로 이동
 function to_recommended_movies() {
     location.href = "recommended_movie.html"

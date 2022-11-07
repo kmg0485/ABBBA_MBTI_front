@@ -13,9 +13,9 @@
 .circle {
     width: 200px;
     height: 200px;
-    background-color: #8fffdf;
+    background-color: #bcdee7;
     border-radius: 50%;
-    border-color: #27e0ac;
+    border-color: #bcdee7;
     margin: 0 auto; 
     margin-top: 20px;
     margin-bottom: 50px;
@@ -29,8 +29,8 @@
 }
 
 .submit_btn {
-    background: #27e0ac;
-    border-color: #27e0ac;
+    background: #bcdee7;
+    border-color: #bcdee7;
     color: #fff;
     border-radius: 5px;
     border-style: solid;

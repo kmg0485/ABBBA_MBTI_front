@@ -11,27 +11,42 @@
     <link rel="stylesheet" href="css/articles.css">
     <meta charset="UTF-8" />
     <title>커뮤니티 메인페이지</title>
+    <script>
+        function forbid() {
+            const storge = localStorage.getItem("payload");
+            if (storge) {
+                pass
+            }
+            else{
+                alert("로그인 해주세요.")
+                window.location.href="signin.html"
+            }
+        }
+        forbid()
+    </script>
 </head>
-<body style="background-color: rgb(232, 229, 229);">
+<body>
     <nav>
         <div>
-            <button onclick="to_write_article();" style="border-radius:20px;border-color: #27E0AC;"
-                class="btn button" type="button">UPLOAD</button>
+            <button onclick="to_write_article();" style="border-radius: 20px;"
+            class="btn btn-outline-primary"       type="button">UPLOAD</button>
         </div>
         <div>
-            <button onclick=" handleLogout(),to_signin();" style="border-radius:20px;border-color: #27E0AC;"
-                class="btn button" type="submit">LOGOUT</button>
+            <button onclick="to_profile();" style="border-radius: 20px;"
+            class="btn btn-outline-primary"       type="button">PROFILE</button>
         </div>
         <div>
-            <button onclick="to_main();"
-                style="margin: 0px 25px 0px 0px; border-radius:20px;border-color: #27E0AC; width:80px; float: right;"
-                class="btn button" type="submit">HOME</button>
+            <button onclick="handleLogout(), to_signin();" style="border-radius: 20px;"
+            class="btn btn-outline-primary"         type="submit">LOGOUT</button>
+        </div>
+        <div>
+            <button onclick="to_main();" style="border-radius: 20px;"
+            class="btn btn-outline-primary"         type="submit">HOME</button>
         </div>
     </nav>
     <div class="container">
       <div class="row"></div> 
     </div>
-    <div id="abb">aa</div> 
     <script src="javascript/articles.js"></script>
     <script src="javascript/path.js"></script>
     <script src="javascript/sign.js"></script>

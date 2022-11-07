@@ -11,8 +11,24 @@
   <meta charset="UTF-8" />
 
   <title>영화 페이지</title>
+  <script>
+    function forbid() {
+        const storge = localStorage.getItem("payload");
+        if (storge) {
+            pass
+        }
+        else{
+            alert("로그인 해주세요.")
+            window.location.href="signin.html"
+        }
+    }
+    forbid()
+</script>
   <link rel="stylesheet" href="css/movie_list.css">
   <script src="javascript/movie_list.js"></script>
+  <script src="javascript/path.js"></script>
+  <script src="javascript/sign.js"></script>
+
     
 </head>
 
@@ -20,20 +36,16 @@
   <nav>
     <div id="greeting"></div>
     <div>
-      <a  href="#"><button style="border-radius:20px;" class="btn btn-outline-danger"
-          type="submit">UPLOAD</button></a>
+  <button style="border-radius:20px;" class="btn btn-outline-danger"
+          type="button" onclick="to_profile()">PROFILE</button>
     </div>
     <div>
       <a href=#> <button style="border-radius:20px;" class="btn btn-outline-danger"
           type="button" onclick="handleLogout()">LOGOUT</button></a>
 
     </div>
-    <form class="d-flex">
-      <input style="border-radius: 20px;" class="form-control me-2" type="search" placeholder="Search"
-        name="search" aria-label="Search" style="width: 800px" />
-      <button style="border-radius: 20px;" class="btn btn-outline-danger" type="submit">SEARCH</button>
-    </form>
 
+    </div>
 
   </nav>
   <div id="container">

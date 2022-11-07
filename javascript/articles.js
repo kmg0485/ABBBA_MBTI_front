@@ -24,16 +24,18 @@ async function handleAuthorization() {
 
         const feed = document.createElement("div")
         feed.innerHTML=
-        `<div class="card" id="card">
+        `<div class="card" id="card" style="width:60vw; border-radius : 25px; border-color:black;">
         
         <div class="card-header"id="title">${response_json[i].title}</div>
         <div class="card-body">
         <p class="card-text" id="context">${response_json[i].content}</p>
-        <div id= "look" onclick="to_article_detail(${response_json[i].id})" class="btn btn-primary">${'자세히보기'}</div>
-        <div class = "buttons${i}", id = "buttons${i}" >
-        <a onclick="to_edit_article(${response_json[i].id})" class="btn btn-primary">${'수정'}</a>
-        <a onclick="delete_post(${response_json[i].id})" class="btn btn-primary">${'삭제'}</a>
-        </div>
+      
+        <div style="text-align:end;" ><div style="display:flex;justify-content:end;">
+     <div  id = "buttons${i}" >
+        <a style="border-radius:20px;" onclick="to_edit_article(${response_json[i].id})" class="btn btn-outline-primary">${'수정'}</a>
+        <a style="border-radius:20px; onclick="delete_post(${response_json[i].id})" class="btn btn-outline-primary">${'삭제'}</a></div>
+        <div style="border-radius:20px; margin-left:5px;" onclick="to_article_detail(${response_json[i].id})" class="btn btn-outline-primary">${'자세히보기'}</div>
+        </div></div>
         </div>`;
         document.querySelector(".row").append(feed)
 

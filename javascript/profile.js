@@ -18,7 +18,6 @@ async function handleAuthorization() {
   });
 
   const response_json = await response.json();
-  console.log(response_json);
 
   const bio = document.getElementById("bio");
   const mbti = document.getElementById("mbti");
@@ -145,6 +144,7 @@ async function handleAuthorization() {
     const comment_box = document.createElement("div")
     comment_box.classList.add("comment_box")
     comments.appendChild(comment_box)
+
 
     const article_link = document.createElement("a")
     article_link.href = "#"

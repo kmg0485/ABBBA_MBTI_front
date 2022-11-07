@@ -11,8 +11,22 @@
   <meta charset="UTF-8" />
 
   <title>영화 페이지</title>
+  <script>
+    function forbid() {
+        const storge = localStorage.getItem("payload");
+        if (storge) {
+            pass
+        }
+        else{
+            alert("로그인 해주세요.")
+            window.location.href="signin.html"
+        }
+    }
+    forbid()
+</script>
   <link rel="stylesheet" href="css/movie_list.css">
   <script src="javascript/recommended_movie.js"></script>
+  <script src="javascript/path.js"></script>
     
 </head>
 
@@ -21,7 +35,7 @@
     <div id="greeting"></div>
     <div>
       <a  href="#"><button style="border-radius:20px;" class="btn btn-outline-danger"
-          type="submit">UPLOAD</button></a>
+          type="button" onclick="to_friends()">친구 추천 보기</button></a>
     </div>
     <div>
       <a href=#> <button style="border-radius:20px;" class="btn btn-outline-danger"
@@ -33,6 +47,11 @@
         name="search" aria-label="Search" style="width: 800px" />
       <button style="border-radius: 20px;" class="btn btn-outline-danger" type="submit">SEARCH</button>
     </form>
+    <div>
+      <a href=#> <button style="border-radius:20px;" class="btn btn-outline-danger"
+          type="button" onclick="to_main()">HOME</button></a>
+
+    </div>
 
 
   </nav>

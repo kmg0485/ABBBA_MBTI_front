@@ -15,15 +15,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <link rel="stylesheet" href="css/profile.css" />
-    <script src="javascript/path.js"></script>
-    <script src="css/box-shadow.js" async></script>
+    <script src="javascript/profile.js"></script>
+    <script src="javascript/path.js "></script>
+    <!-- <script src="javascript/box-shadow.js" async></script> -->
     <title>profile</title>
   </head>
 
   <body>
     <nav>
       <div>
-        <button style="border-radius: 20px" class="btn btn-outline-danger" type="button">프로필편집</button></a>
+        <button onclick="to_insert_profile();" type="button" class="submit_btn, btn btn-outline-danger" style="border-radius: 20px" >프로필 편집</button>
       </div>
       <div>
         <button onclick="handleLogout();" type="button" class="btn btn-outline-danger" style="border-radius: 20px" class="submit_btn">로그아웃</button>
@@ -36,78 +37,118 @@
     <div class="profile_section">
       <div class="profile">
           <div class="profile_image ">
-            <div class="mbti">MBTI</div>
-          <img
-            src="https://starmaker.kr/data/file/month/237162078_VA5Ke7EJ_28d75eb81c1c0af72b72a87e5d6358f1fe69360e.jpg"
+            <div id="mbti" name="mbti"></div>
+            <div id="nickname" name="nickname"></div>
+          <img id="profile_img" name="profile_img"
+            src=""
           /></div>
-          <div class="bio">
-            <div class="bio_text">이 줄은 자신의 소개글 자리입니다.</div>
-            <button style="border-radius: 20px" class="btn btn-outline-danger" type="button" onclick="">프로필 편집</button>
+          <div class="bio_text">
+            <div id="bio" name="bio"></div>
+            <button onclick="to_edit_profile();" style="border-radius: 20px" class="submit_btn, btn btn-outline-danger"  >프로필 편집</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="content">
-      <a href="#tab1" class="content_text"> <div>내가 좋아요 한 글</div></a>
-      <a href="#tab2" class="content_text"> <div>내가 팔로우 한 글</div></a>
-      <a href="#tab3" class="content_text"> <div>내가 쓴 글</div></a>
-      <a href="#tab4" class="content_text"> <div>내가 쓴 코멘트</div></a>
-    </div>
-
-    <div id="container">
-      <div id="tab1">
-        <div class="item">
-          <img src="https://a.cdn-hotels.com/gdcs/production93/d1197/eb5f6d13-549d-4513-beef-c6ca685f5610.jpg" />
-          <div class="item__text">
-            여기는 설명글 부분입니다. 다들 유의하여 주십시요. 날이 춥습니다. 옷을 따스히 여미시고 목도리도 꼭 하셔요. 사실 설명글을 길게 써보려고 이렇게 길게
-            씁니다. 3줄이 넘어가면 칸을 침범하네요.
+    <div class="wrap">
+      <div class="tab_menu">
+        <ul class="list">
+          <li class="is_on">
+            <a href="#tab1" class="btn">내가 좋아요 한 영화</a>
+          </li>
+          <li>
+            <a href="#tab2" class="btn">내가 좋아요 한 글</a>
+          </li>
+          <li>
+            <a href="#tab3" class="btn">내가 쓴 게시글</a>
+          </li>
+          <li>
+            <a href="#tab4" class="btn">내가 쓴 코멘트</a>
+          </li>
+        </ul>
+    
+        <div class="cont_area" id="cont_area">
+          <div id="tab1">
+            <div class="cont">
+              <div id="item">
+               
+              </div>
+              
+            </div>
           </div>
-        </div>
-        <div class="item">
-          <img src="https://a.cdn-hotels.com/gdcs/production93/d1197/eb5f6d13-549d-4513-beef-c6ca685f5610.jpg" />
-          <div class="item__text">
-            여기는 설명글 부분입니다. 다들 유의하여 주십시요. 날이 춥습니다. 옷을 따스히 여미시고 목도리도 꼭 하셔요. 사실 설명글을 길게 써보려고 이렇게 길게
-            씁니다. 3줄이 넘어가면 칸을 침범하네요.
+          <div id="tab2" class="cont">
+            <div class="text-area">
+              <div class="title-area">
+                <div class="title">
+                내가 좋아요 한 글 탭입니다.
+                </div> 
+                <div>
+                  <div class="author">작성자</div>
+                  <div class="created_at">2022.11.07 </div>
+                </div>
+              </div>
+              
+              <div class="content">여기는 게시글의 본문영역입니다. 본문은 길어야겠지요? 긴것에 대한 테스트입니다. 한번 최대한 길게 작성해보겠습니다. 항상 힘내세요.</div>
+            </div>
+            <div class="text-area">
+              <div class="title-area">
+                <div class="title">
+                이곳은 제목입니다. 여기도 길게 지으면 어떻게 되는지 궁금해서 한번 적어봅니다.
+                </div> 
+                <div>
+                  <div class="author">작성자</div>
+                  <div class="created_at">2022.11.07 </div>
+                </div>
+              </div>
+              
+              <div class="content">여기는 게시글의 본문영역입니다. 본문은 길어야겠지요? 긴것에 대한 테스트입니다. 한번 최대한 길게 작성해보겠습니다. 항상 힘내세요.</div>
+            </div>
+            
           </div>
-        </div>
-        <div class="item">
-          <img src="https://a.cdn-hotels.com/gdcs/production93/d1197/eb5f6d13-549d-4513-beef-c6ca685f5610.jpg" />
-          <div class="item__text">
-            여기는 설명글 부분입니다. 다들 유의하여 주십시요. 날이 춥습니다. 옷을 따스히 여미시고 목도리도 꼭 하셔요. 사실 설명글을 길게 써보려고 이렇게 길게
-            씁니다. 3줄이 넘어가면 칸을 침범하네요.
-          </div>
-        </div>
-        <div class="item">
-          <img src="https://a.cdn-hotels.com/gdcs/production93/d1197/eb5f6d13-549d-4513-beef-c6ca685f5610.jpg" />
-          <div class="item__text">
-            여기는 설명글 부분입니다. 다들 유의하여 주십시요. 날이 춥습니다. 옷을 따스히 여미시고 목도리도 꼭 하셔요. 사실 설명글을 길게 써보려고 이렇게 길게
-            씁니다. 3줄이 넘어가면 칸을 침범하네요.
-          </div>
-        </div>
-        <div class="item">
-          <img src="https://a.cdn-hotels.com/gdcs/production93/d1197/eb5f6d13-549d-4513-beef-c6ca685f5610.jpg" />
-          <div class="item__text">
-            여기는 설명글 부분입니다. 다들 유의하여 주십시요. 날이 춥습니다. 옷을 따스히 여미시고 목도리도 꼭 하셔요. 사실 설명글을 길게 써보려고 이렇게 길게
-            씁니다. 3줄이 넘어가면 칸을 침범하네요.
-          </div>
-        </div>
-        <div class="item">
-          <img src="https://a.cdn-hotels.com/gdcs/production93/d1197/eb5f6d13-549d-4513-beef-c6ca685f5610.jpg" />
-          <div class="item__text">
-            여기는 설명글 부분입니다. 다들 유의하여 주십시요. 날이 춥습니다. 옷을 따스히 여미시고 목도리도 꼭 하셔요. 사실 설명글을 길게 써보려고 이렇게 길게
-            씁니다. 3줄이 넘어가면 칸을 침범하네요.
-          </div>
-        </div>
-        <div class="item">
-          <img src="https://a.cdn-hotels.com/gdcs/production93/d1197/eb5f6d13-549d-4513-beef-c6ca685f5610.jpg" />
-          <div class="item__text">
-            여기는 설명글 부분입니다. 다들 유의하여 주십시요. 날이 춥습니다. 옷을 따스히 여미시고 목도리도 꼭 하셔요. 사실 설명글을 길게 써보려고 이렇게 길게
-            씁니다. 3줄이 넘어가면 칸을 침범하네요.
+          <div id="tab3" class="cont">
+            <div id="wirte_text_area">
+              <div id="title_area">
+                <h5 class="title">
+                내가 쓴 게시글 탭입니다.
+                </h5> 
+                <div>
+                  <p class="user">작성자</p>
+                </div>
+                <p class="content">여기는 게시글의 본문영역입니다. 본문은 길어야겠지요? 긴것에 대한 테스트입니다. 한번 최대한 길게 작성해보겠습니다. 항상 힘내세요.</p>
+              </div>
+            </div>
+            
+          <div id="tab4" class="cont">
+            <div class="text-area">
+              <div class="title-area">
+                <div class="title">
+                내가 쓴 코멘트 탭입니다.
+                </div> 
+                <div>
+                  <div class="author">작성자</div>
+                  <div class="created_at">2022.11.07 </div>
+                </div>
+              </div>
+              
+              <div class="content">여기는 게시글의 본문영역입니다. 본문은 길어야겠지요? 긴것에 대한 테스트입니다. 한번 최대한 길게 작성해보겠습니다. 항상 힘내세요.</div>
+            </div>
+            <div class="text-area">
+              <div class="title-area">
+                <div class="title">
+                이곳은 제목입니다. 여기도 길게 지으면 어떻게 되는지 궁금해서 한번 적어봅니다.
+                </div> 
+                <div>
+                  <div class="author">작성자</div>
+                  <div class="created_at">2022.11.07 </div>
+                </div>
+              </div>
+              
+              <div class="content">여기는 게시글의 본문영역입니다. 본문은 길어야겠지요? 긴것에 대한 테스트입니다. 한번 최대한 길게 작성해보겠습니다. 항상 힘내세요.</div>
+            </div>
           </div>
         </div>
       </div>
-      
     </div>
+
   </body>
 </html>

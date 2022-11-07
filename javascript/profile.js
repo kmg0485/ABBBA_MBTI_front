@@ -10,7 +10,7 @@ async function handleAuthorization() {
   //   const nickname = payload_parse.nickname;
   const user = payload_parse.user_id;
   nickname.innerText = payload_parse.nickname;
-  const response = await fetch(`http://127.0.0.1:8000/users/${user}/profile/`, {
+  const response = await fetch(`http://127.0.0.1:8000/users/profile/`, {
     headers: {
       authorization: "Bearer " + localStorage.getItem("access"),
     },
@@ -29,7 +29,7 @@ async function handleAuthorization() {
   profile_img.src = "http://127.0.0.1:8000" + response_json.profile_img;
 
   const movies = document.getElementById("item");
-  console.log(movies);
+
   response_json.movie_set.forEach((movie) => {
     const movie_set = document.createElement("div");
     movies.appendChild(movie_set);
@@ -45,25 +45,125 @@ async function handleAuthorization() {
     movie_set.appendChild(poster);
   });
 
-  //   const write_articles = document.getElementById("title_area");
-  //   console.log(write_articles);
-  //   response_json.write_articles.forEach((write_article) => {
-  //     const article_set = document.createElement("div");
-  //     write_articles.appendChild(article_set);
 
-  //     const title = document.createElement("h5");
-  //     title.classList.add("title");
-  //     title.innerText = write_art.title;
-  //     article_set.appendChild(title);
+  const follow = document.getElementById("tab4");
+  const wrap = document.createElement("div");
+  wrap.style.display = "flex";
+  wrap.style.justifyContent = "space-evenly";
+  wrap.style.margin = "auto";
+  wrap.style.width = "90%";
+  follow.appendChild(wrap);
 
-  //     const author = document.createElement("p");
-  //     author.classList.add("user");
-  //     article_set.appendChild(author);
+  const left = document.getElementById("left");
+  const right = document.getElementById("right");
+  response_json.followings.forEach(following => {
+    // 팔로잉 목록 데이터 연동
 
-  //     const content = document.createElement("p");
-  //     content.classList.add("content");
-  //     content.innerText = write_art.content;
-  //   });
+
+    const person = document.createElement("div")
+    person.classList.add("person")
+    left.appendChild(person)
+
+    const image = document.createElement("img")
+    image.style.width = "7%"
+    image.src = "http://127.0.0.1:8000" + following.profile_img
+    person.appendChild(image)
+
+    const name = document.createElement("p")
+    name.innerText = following.nickname
+    person.appendChild(name)
+
+    const mbti = document.createElement("p")
+    mbti.innerText = `(${following.mbti})`
+    person.appendChild(mbti)
+
+    const button = document.createElement("button")
+    button.style.height = "80%"
+    button.style.margin = "auto"
+    button.style.width = "25%"
+    button.innerText = "UNFOLLOW"
+    button.onclick = function () {
+        
+      const id = following.id
+      fetch(`http://127.0.0.1:8000/users/follow/${id}/`, {
+          headers: {
+              "authorization": "Bearer " + localStorage.getItem("access")
+          },
+          method: 'POST',
+          body: {}
+      })
+      alert("언팔로우!")
+      window.location.reload()
+  }
+    person.appendChild(button)
+
+  })
+
+  response_json.followers.forEach(follower => {
+    // 팔로워 리스트 연동
+    
+
+    const person = document.createElement("div")
+    person.classList.add("person")
+    right.appendChild(person)
+
+    const image = document.createElement("img")
+    image.style.width = "7%"
+    image.src = "http://127.0.0.1:8000" + follower.profile_img
+    person.appendChild(image)
+
+    const name = document.createElement("p")
+    name.innerText = follower.nickname
+    person.appendChild(name)
+
+    const mbti = document.createElement("p")
+    mbti.innerText = `(${follower.mbti})`
+    person.appendChild(mbti)
+  })
+
+  //내가 쓴 게시글 연동
+  const articles = document.getElementById("tab2");
+
+  response_json.article_set.forEach(article => {
+    const article_box = document.createElement("div")
+    article_box.classList.add("article_box")
+    articles.appendChild(article_box)
+
+    const article_title = document.createElement("h5")
+    article_title.innerText = article.title
+    article_box.appendChild(article_title)
+
+    const article_content = document.createElement("p")
+    article_content.innerText = article.content
+    article_box.appendChild(article_content)
+  })
+
+  //내가 쓴 코멘트 연동
+  const comments = document.getElementById("tab3");
+
+  response_json.comment_set.forEach(comment => {
+    const comment_box = document.createElement("div")
+    comment_box.classList.add("comment_box")
+    comments.appendChild(comment_box)
+
+    const article_link = document.createElement("a")
+    article_link.href = "#"
+    article_link.innerText = "click me!"
+    article_link.classList.add("link")
+    article_link.onclick = `to_article_detail(${comment.article})`
+    comment_box.appendChild(article_link)
+
+    const comment_content = document.createElement("p")
+    comment_content.innerText = comment.content
+    article_link.appendChild(comment_content)
+  })
+  
+
+
+
+
+
+
 }
 
 async function handletapmenu() {

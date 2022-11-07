@@ -24,8 +24,9 @@ function to_articles() {
 }
 
 // 게시글 상세 페이지로 이동
-function to_article_detail() {
-    location.href = "article_detail.html"
+function to_article_detail(id) {
+    location.href = "detail_post.html"
+    localStorage.setItem("article_id", id);
 }
 
 // 게시글 입력 페이지로 이동

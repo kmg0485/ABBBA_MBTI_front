@@ -48,15 +48,25 @@ async function handleAuthorization() {
     movie_set.style.display = "flex"
     movie_set.style.flexDirection = "column"
     container.appendChild(movie_set)
-    const title = document.createElement("h5")
+
+    const title = document.createElement("p")
     title.classList.add("movie_title")
     title.innerText = movie.title
+    title.style.padding = 0
     movie_set.appendChild(title)
+
+    const poster_link = document.createElement("button")
+    poster_link.style.border = 0
+    poster_link.style.background = "none"
+    poster_link.style.margin = 0
+    movie_set.appendChild(poster_link)
 
     const poster = document.createElement("img")
     poster.src = movie.poster
     poster.classList.add("rec_movie")
-    movie_set.appendChild(poster)
+    poster.style.borderRadius = "10px"
+    poster.style.objectFit = "cover"
+    poster_link.appendChild(poster)
 
     const like_button = document.createElement("button")
     like_button.style.border = 0

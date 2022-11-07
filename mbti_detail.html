@@ -11,6 +11,18 @@
   <script src="javascript/mbti.js"></script>
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
   <title>MBTI Detail</title>
+  <script>
+    function forbid() {
+        const storge = localStorage.getItem("payload");
+        if (storge) {
+        }
+        else{
+            alert("로그인 해주세요.")
+            window.location.href="signin.html"
+        }
+    }
+    forbid()
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 

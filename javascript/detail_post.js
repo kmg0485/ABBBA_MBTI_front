@@ -16,7 +16,6 @@ window.onload = () => {
         },
         method : 'GET'
     })
-
     response_json = await response.json()
     title.innerText = response_json.title;
     content.innerText = response_json.content;
@@ -29,13 +28,13 @@ window.onload = () => {
     for(let i = comment_set.length -1; i >= 0; i--){
         const feed = document.createElement("div")
         feed.innerHTML=
-        `<div style="width:98%; border-style:solid;  border-radius:10px; margin-bottom:10px;  margin-top:5px;
+        `<div style="border-bottom:1px solid gray;  margin-top:5px;
         
         color: black;" class="card" id="card">
-        <div class="card-body">
-        <p class="card-text" id="context">&nbsp${comment_set[i].content}</p>
-        <div style="margin-botton:10px;" class = "buttons${i}", id = "buttons${i}" >
-        <button onclick="delete_comment(${comment_set[i].id})" class="button">${'삭제'}</button>
+        <div style="display:flex; justify-content:space-between;">
+        <p class="card-text" style="width:90%" id="context">&nbsp${comment_set[i].content}</p>
+        <div class = "buttons${i}" style="width:20%;margin:auto;" id = "buttons${i}" >
+        <button onclick="delete_comment(${comment_set[i].id})" class="button submit_btn">${'삭제'}</button>
         </div>
         </div>`;
         document.querySelector(".row").append(feed)

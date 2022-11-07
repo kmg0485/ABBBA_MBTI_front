@@ -6,6 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>프로필 페이지</title>
+  <script>
+    function forbid() {
+        const storge = localStorage.getItem("payload");
+        if (storge) {
+        }
+        else{
+            alert("로그인 해주세요.")
+            window.location.href="signin.html"
+        }
+    }
+    forbid()
+</script>
   <link rel="stylesheet" href="css/friends.css">
   <script src="javascript/sign.js"></script>
   <script src="javascript/path.js"></script>
@@ -16,7 +28,7 @@
   <aside class="profile-card">
     <div id="head-wrap">
       <header>
-        <img id="profile_image" src="http://sports.hankooki.com/news/photo/202203/20220307_1_bodyFimg_6787549.jpg">
+        <img id="profile_image"  onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'" src="http://sports.hankooki.com/news/photo/202203/20220307_1_bodyFimg_6787549.jpg">
 
         <!-- the username -->
         <h1 id="nickname">닉네임 자리</h1>
@@ -39,6 +51,7 @@
           <button onclick="to_edit_profile();" type="button" class="submit_btn">프로필 편집</button>
           <button onclick="handleLogout(),to_signin();" type="button" class="submit_btn">로그아웃</button>
           <button onclick="to_movie_list();" type="button" class="submit_btn">좋아하는 영화 고르기</button>
+          <button onclick="to_main();" type="button" class="submit_btn">HOME</button>
         </div>
       </div>
 

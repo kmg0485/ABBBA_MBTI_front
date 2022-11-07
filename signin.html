@@ -7,6 +7,16 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <title>MBTI 로그인</title>
+        <script>
+        function forbid() {
+            const storge = localStorage.getItem("payload");
+            if (storge) {
+                alert("이미 로그인 중이십니다.")
+                window.location.replace(history.back())
+            }
+        }
+        forbid()
+    </script>
     <link rel="stylesheet" href="css/sign.css">
     <script src="javascript/sign.js"></script>
     <script src="javascript/path.js"></script>

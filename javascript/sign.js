@@ -8,10 +8,10 @@ async function handleSignup() {
     if (password == password_check) {
         const response = await fetch('http://127.0.0.1:8000/users/', {
             headers: {
-                'content-type' : 'application/json',
+                'content-type': 'application/json',
             },
             method: 'POST',
-            body: JSON.stringify( {
+            body: JSON.stringify({
                 "nickname": nickname,
                 "password": password,
                 "password_check": password_check
@@ -21,18 +21,18 @@ async function handleSignup() {
     }
 }
 
-async function handleLogin(){
+async function handleLogin() {
     const nickname = document.getElementById("nickname").value
     const password = document.getElementById("password").value
 
-    const response = await fetch('http://127.0.0.1:8000/users/api/token/',{
-        headers : {
-            'content-type' : 'application/json',
+    const response = await fetch('http://127.0.0.1:8000/users/api/token/', {
+        headers: {
+            'content-type': 'application/json',
         },
-        method : 'POST',
-        body : JSON.stringify({
-            "nickname" : nickname,
-            "password":password
+        method: 'POST',
+        body: JSON.stringify({
+            "nickname": nickname,
+            "password": password
         })
     })
     const response_json = await response.json()
@@ -43,12 +43,13 @@ async function handleLogin(){
 
     const base64Url = response_json.access.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c){
+    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
         return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
     }).join(''));
 
     localStorage.setItem("payload", jsonPayload);
     alert("로그인이 완료되었습니다!")
+
     console.log(jsonPayload)
 
     const Response = await fetch("http://127.0.0.1:8000/users/profile/", {
@@ -68,11 +69,13 @@ async function handleLogin(){
         location.href="main.html"
     }
 
+
 }
 
-function handleLogout(){
+function handleLogout() {
     localStorage.removeItem("access")
     localStorage.removeItem("refresh")
     localStorage.removeItem("payload")
     alert("로그아웃이 완료되었습니다!")
 }
+

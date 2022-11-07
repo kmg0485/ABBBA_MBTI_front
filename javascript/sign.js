@@ -49,7 +49,7 @@ async function handleLogin(){
 
     localStorage.setItem("payload", jsonPayload);
     alert("로그인이 완료되었습니다!")
-    location.href="friends.html"
+    location.href="insert_profile.html"
 }
 
 function handleLogout(){

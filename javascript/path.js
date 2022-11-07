@@ -73,7 +73,7 @@ function to_mbti_menu() {
 
 // 추천된 영화 리스트 페이지로 이동
 function to_recommended_movies() {
-    location.href = "recommended_movies.html"
+    location.href = "recommended_movie.html"
 }
 
 // 메인 페이지로 이동

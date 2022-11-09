@@ -28,14 +28,6 @@ async function handleAuthorization() {
   profile_img.src = "http://127.0.0.1:8000" + response_json.profile_img;
 
   const movies = document.getElementById("item");
-
-  // location.reload();
-  // var cnt = 0;
-  // if (cnt == 1) {
-  //   tab1 == onclick;
-  //   location.reload();
-  //   cnt += 0;
-  // }
   response_json.movie_set.forEach((movie) => {
     const movie_set = document.createElement("div");
     movies.appendChild(movie_set);

@@ -64,7 +64,7 @@ async function handleLogin() {
 
 
     if (json.mbti==""){
-        location.href="insert_profile.html"
+        location.href="edit_profile.html"
     } else{
         location.href="main.html"
     }
@@ -75,7 +75,8 @@ async function handleLogin() {
 function handleLogout() {
     localStorage.removeItem("access")
     localStorage.removeItem("refresh")
-    localStorage.removeItem("payload")
+    localStorage.removeItem("payload")      
     alert("로그아웃이 완료되었습니다!")
+    location.href="signin.html";
 }
 

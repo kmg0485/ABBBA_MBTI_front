@@ -11,7 +11,15 @@ body {
 }
 
 
+.border_line {
+    border-bottom: solid 2px gray;
+    border-top: solid 2px gray;
+}
 
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
 
 .submit_btn {
     background: #ffcbcb;
@@ -26,7 +34,7 @@ body {
     margin-top: 10px;
     margin: 5px;
     cursor: pointer;
-    border-radius : 5px;
+    border-radius: 5px;
 }
 
 .buttons {
@@ -44,7 +52,7 @@ body {
     background: #ffcbcb;
     color: black;
     border: 1px solid #ffcbcb;
-    border-radius : 5px;
+    border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
     line-height: 28px;
@@ -70,8 +78,9 @@ body {
 .row {
     width: 100%;
 }
-#home_button{
+
+#home_button {
     display: flex;
     justify-content: center;
-    cursor : pointer;
+    cursor: pointer;
 }

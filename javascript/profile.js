@@ -29,6 +29,13 @@ async function handleAuthorization() {
 
   const movies = document.getElementById("item");
 
+  // location.reload();
+  // var cnt = 0;
+  // if (cnt == 1) {
+  //   tab1 == onclick;
+  //   location.reload();
+  //   cnt += 0;
+  // }
   response_json.movie_set.forEach((movie) => {
     const movie_set = document.createElement("div");
     movies.appendChild(movie_set);
@@ -45,7 +52,7 @@ async function handleAuthorization() {
     movie_set.appendChild(poster);
   });
 
-  const onerror = "https://cdn-icons-png.flaticon.com/512/847/847969.png"
+  const onerror = "https://cdn-icons-png.flaticon.com/512/847/847969.png";
   const follow = document.getElementById("tab4");
   const wrap = document.createElement("div");
   wrap.style.display = "flex";
@@ -56,110 +63,96 @@ async function handleAuthorization() {
 
   const left = document.getElementById("left");
   const right = document.getElementById("right");
-  response_json.followings.forEach(following => {
+  response_json.followings.forEach((following) => {
     // 팔로잉 목록 데이터 연동
 
+    const person = document.createElement("div");
+    person.classList.add("person");
+    left.appendChild(person);
 
-    const person = document.createElement("div")
-    person.classList.add("person")
-    left.appendChild(person)
+    person.innerHTML = `<img style="width:7%;" src="http://127.0.0.1:8000${following.profile_img}" onerror="this.src='${onerror}'" >`;
 
+    const name = document.createElement("p");
+    name.innerText = following.nickname;
+    person.appendChild(name);
 
+    const mbti = document.createElement("p");
+    mbti.innerText = `(${following.mbti})`;
+    person.appendChild(mbti);
 
-    person.innerHTML = `<img style="width:7%;" src="http://127.0.0.1:8000${following.profile_img}" onerror="this.src='${onerror}'" >`
-
-    const name = document.createElement("p")
-    name.innerText = following.nickname
-    person.appendChild(name)
-
-    const mbti = document.createElement("p")
-    mbti.innerText = `(${following.mbti})`
-    person.appendChild(mbti)
-
-    const button = document.createElement("button")
-    button.style.height = "80%"
-    button.style.margin = "auto"
-    button.style.width = "25%"
-    button.innerText = "언팔"
+    const button = document.createElement("button");
+    button.style.height = "80%";
+    button.style.margin = "auto";
+    button.style.width = "25%";
+    button.innerText = "언팔";
     button.onclick = function () {
-
-      const id = following.id
+      const id = following.id;
       fetch(`http://127.0.0.1:8000/users/follow/${id}/`, {
         headers: {
-          "authorization": "Bearer " + localStorage.getItem("access")
+          authorization: "Bearer " + localStorage.getItem("access"),
         },
-        method: 'POST',
-        body: {}
-      })
-      alert("언팔로우!")
-      window.location.reload()
-    }
-    person.appendChild(button)
+        method: "POST",
+        body: {},
+      });
+      alert("언팔로우!");
+      window.location.reload();
+    };
+    person.appendChild(button);
+  });
 
-  })
-
-  response_json.followers.forEach(follower => {
+  response_json.followers.forEach((follower) => {
     // 팔로워 리스트 연동
 
+    const person = document.createElement("div");
+    person.classList.add("person");
+    right.appendChild(person);
+    person.innerHTML = `<img style="width:7%;" src="http://127.0.0.1:8000${follower.profile_img}" onerror="this.src='${onerror}'" >`;
 
-    const person = document.createElement("div")
-    person.classList.add("person")
-    right.appendChild(person)
-    person.innerHTML=`<img style="width:7%;" src="http://127.0.0.1:8000${follower.profile_img}" onerror="this.src='${onerror}'" >`
+    const name = document.createElement("p");
+    name.innerText = follower.nickname;
+    person.appendChild(name);
 
-    const name = document.createElement("p")
-    name.innerText = follower.nickname
-    person.appendChild(name)
-
-    const mbti = document.createElement("p")
-    mbti.innerText = `(${follower.mbti})`
-    person.appendChild(mbti)
-  })
+    const mbti = document.createElement("p");
+    mbti.innerText = `(${follower.mbti})`;
+    person.appendChild(mbti);
+  });
 
   //내가 쓴 게시글 연동
   const articles = document.getElementById("tab2");
 
-  response_json.article_set.forEach(article => {
-    const article_box = document.createElement("div")
-    article_box.classList.add("article_box")
-    articles.appendChild(article_box)
+  response_json.article_set.forEach((article) => {
+    const article_box = document.createElement("div");
+    article_box.classList.add("article_box");
+    articles.appendChild(article_box);
 
-    const article_title = document.createElement("h5")
-    article_title.innerText = article.title
-    article_box.appendChild(article_title)
+    const article_title = document.createElement("h5");
+    article_title.innerText = article.title;
+    article_box.appendChild(article_title);
 
-    const article_content = document.createElement("p")
-    article_content.innerText = article.content
-    article_box.appendChild(article_content)
-  })
+    const article_content = document.createElement("p");
+    article_content.innerText = article.content;
+    article_box.appendChild(article_content);
+  });
 
   //내가 쓴 코멘트 연동
   const comments = document.getElementById("tab3");
 
-  response_json.comment_set.forEach(comment => {
-    const comment_box = document.createElement("div")
-    comment_box.classList.add("comment_box")
-    comments.appendChild(comment_box)
+  response_json.comment_set.forEach((comment) => {
+    const comment_box = document.createElement("div");
+    comment_box.classList.add("comment_box");
+    comments.appendChild(comment_box);
 
+    const article_link = document.createElement("a");
+    article_link.href = "#";
+    article_link.innerText = "click me!";
+    article_link.classList.add("link");
+    article_link.onclick = `to_article_detail(${comment.article})`;
+    comment_box.appendChild(article_link);
 
-    const article_link = document.createElement("a")
-    article_link.href = "#"
-    article_link.innerText = "click me!"
-    article_link.classList.add("link")
-    article_link.onclick = `to_article_detail(${comment.article})`
-    comment_box.appendChild(article_link)
-
-    const comment_content = document.createElement("p")
-    comment_content.innerText = comment.content
-    article_link.appendChild(comment_content)
-  })
-
-
-
-
-
-
-
+    const comment_content = document.createElement("p");
+    comment_content.innerText = comment.content;
+    article_link.appendChild(comment_content);
+  });
 }
 
 async function handletapmenu() {

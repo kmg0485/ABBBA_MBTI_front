@@ -56,7 +56,6 @@ img:hover {
 }
 
 .list {
-
   background-color: white;
   border-radius: 10px;
   width: auto;
@@ -98,7 +97,6 @@ img:hover {
 }
 
 #nickname {
-
   text-align: center;
   font-size: 20px;
   color: rgb(116, 192, 234);
@@ -180,7 +178,6 @@ a {
   justify-content: end;
 }
 
-
 #title_area {
   float: left;
   margin-left: 60px;
@@ -203,7 +200,7 @@ a {
   background-color: white;
   color: black;
   padding: 15px;
-  /* display: flex; */
+  display: block;
   display: grid;
   grid-template-columns: repeat(4, minmax(auto, 25%));
   grid-template-rows: repeat(4, 1fr);
@@ -216,7 +213,6 @@ a {
     ". . ."
     ". footer footer footer .";
 }
-
 
 /* 추가 */
 .person {
@@ -235,37 +231,37 @@ p {
   justify-content: space-around;
 }
 
-#follow_title>div {
+#follow_title > div {
   font-size: 23px;
 }
 
 #left {
   border-right: 1px solid gray;
-  width : 50%;
+  width: 50%;
 }
-#right{
-  width:50%;
+#right {
+  width: 50%;
 }
 
-#item>div:nth-child(1) {
+#item > div:nth-child(1) {
   grid-column: 1/2;
   grid-row: 1/2;
   width: 80%;
 }
 
-#item>div:nth-child(2) {
+#item > div:nth-child(2) {
   grid-column: 2/3;
   grid-row: 1/2;
   width: 80%;
 }
 
-#item>div:nth-child(3) {
+#item > div:nth-child(3) {
   grid-column: 3/4;
   grid-row: 1/2;
   width: 80%;
 }
 
-#item>div:nth-child(4) {
+#item > div:nth-child(4) {
   grid-column: 4/5;
   grid-row: 1/2;
   width: 80%;
@@ -293,12 +289,13 @@ button:hover {
 }
 
 #tab2,
-#tab3{
+#tab3 {
   margin: auto;
   padding: 3% 0;
 }
 
-.article_box, .comment_box {
+.article_box,
+.comment_box {
   background-color: white;
   border-radius: 10px;
   padding: 15px;
@@ -306,28 +303,29 @@ button:hover {
 }
 
 .article_title {
-  text-align: center
+  text-align: center;
 }
 
-.article_content, .comment_article{
+.article_content,
+.comment_article {
   width: 100%;
   text-align: left;
   padding: 20px;
 }
 
-.cont_area{
+.cont_area {
   border-radius: 10px;
-  width : 90%;
-  margin : auto;
+  width: 90%;
+  margin: auto;
 }
 
-#tab4{
-  margin:auto;
+#tab4 {
+  margin: auto;
   padding: 3% 0;
   background-color: white;
 }
 
-.link:hover{
+.link:hover {
   font-weight: bolder;
-  color :rgb(116, 192, 234);
+  color: rgb(116, 192, 234);
 }

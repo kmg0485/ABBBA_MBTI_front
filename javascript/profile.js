@@ -45,7 +45,7 @@ async function handleAuthorization() {
     movie_set.appendChild(poster);
   });
 
-
+  const onerror = "https://cdn-icons-png.flaticon.com/512/847/847969.png"
   const follow = document.getElementById("tab4");
   const wrap = document.createElement("div");
   wrap.style.display = "flex";
@@ -64,11 +64,9 @@ async function handleAuthorization() {
     person.classList.add("person")
     left.appendChild(person)
 
-    const image = document.createElement("img")
-    image.style.width = "7%"
 
-    image.src = "http://127.0.0.1:8000" + following.profile_img
-    person.appendChild(image)
+
+    person.innerHTML = `<img style="width:7%;" src="http://127.0.0.1:8000${following.profile_img}" onerror="this.src='${onerror}'" >`
 
     const name = document.createElement("p")
     name.innerText = following.nickname
@@ -107,11 +105,7 @@ async function handleAuthorization() {
     const person = document.createElement("div")
     person.classList.add("person")
     right.appendChild(person)
-
-    const image = document.createElement("img")
-    image.style.width = "7%"
-    image.src = "http://127.0.0.1:8000" + follower.profile_img
-    person.appendChild(image)
+    person.innerHTML=`<img style="width:7%;" src="http://127.0.0.1:8000${follower.profile_img}" onerror="this.src='${onerror}'" >`
 
     const name = document.createElement("p")
     name.innerText = follower.nickname

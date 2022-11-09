@@ -4,7 +4,8 @@ body {
 }
 
 
-h1, h2 {
+h1,
+h2 {
     font-weight: 500;
     margin-block-start: 0px;
     margin-block-end: 0px;
@@ -64,6 +65,7 @@ h2 {
 
 #head-wrap {
     margin: auto;
+    height: 90%;
 }
 
 .profile-card .profile-bio {
@@ -166,7 +168,7 @@ h2 {
     background: #fcdde2;
     color: rgb(85, 85, 85);
     border-radius: 10px;
-    border : 1px solid #fcdde2;
+    border: 1px solid #fcdde2;
     font-size: 14px;
     font-weight: 600;
     line-height: 28px;
@@ -189,13 +191,13 @@ input {
     100% {
         width: 80vw;
         min-width: 500px;
-        height: 300px;
+        top:90%;
         margin-top: 400px;
         background: #FFFFFF;
         border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-border-bottom-left-radius:  0;
-border-bottom-right-radius: 0;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
         opacity: 1;
     }
 }
@@ -210,7 +212,7 @@ border-bottom-right-radius: 0;
     opacity: 0;
     margin-top: 0px;
     display: flex;
-    padding:40px;
+    padding: 40px;
     -webkit-transform: translate(-50%, -50%);
     -webkit-border-radius: 50%;
     -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
@@ -218,55 +220,57 @@ border-bottom-right-radius: 0;
     animation: material 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
-#recommend, #followings{
+#recommend,
+#followings {
     width: 50%;
 }
 
-#recommend{
+#recommend {
     border-right: 1px solid #EEEEEE;
 }
 
 .title {
-    font-size:20px;
+    font-size: 20px;
     text-align: center;
     padding-bottom: 20px;
 }
 
-.text-input{
-    border-left-width:0;
-    border-right-width:0;
-    border-top-width:0;
-    border-bottom-width:1;
-    border-color : #fcdde2;
+.text-input {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-color: #fcdde2;
 }
 
-.real-upload{
-    display:none;
+.real-upload {
+    display: none;
 }
 
-.upload > img{
-    width:8%;
+.upload>img {
+    width: 8%;
     display: block;
     margin: 40px auto 0 auto;
-    opacity : 0;
+    opacity: 0;
     animation: upload 0.5s 3s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
-.upload:hover{
-    cursor:pointer;
+
+.upload:hover {
+    cursor: pointer;
 }
 
 @-webkit-keyframes upload {
     100% {
-        width:8%;
+        width: 8%;
         display: block;
         margin: 40px auto 0 auto;
         opacity: 1;
     }
 }
 
-.follower_image{
-    margin :auto;
-    width : 10%;
+.follower_image {
+    margin: auto;
+    width: 10%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;

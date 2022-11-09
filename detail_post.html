@@ -17,9 +17,9 @@
             const storge = localStorage.getItem("payload");
             if (storge) {
             }
-            else{
+            else {
                 alert("로그인 해주세요.")
-                window.location.href="signin.html"
+                window.location.href = "signin.html"
             }
         }
         forbid()
@@ -30,63 +30,40 @@
 <body>
     <section id="container">
         <div style="border-radius:20px" id="main_container" class="post_form">
+            <div>
             <a onclick="to_articles()">
-                <span id="home_button" class="material-symbols-rounded"
-                   id="home" >home </span>
+                <span id="home_button" class="material-symbols-rounded" id="home">home </span>
             </a>
             <div>
                 <div class="title">
-
-
                 </div>
                 <div class="preview">
-
                 </div>
-
-
                 <div style="border-bottom : solid 2px gray;">
-
                     <p id="title"></p>
-
-
                     <div style="display: flex;">
-
                     </div>
                     <div>
                         <p id="content" style="font-size:15px;">&nbsp</p>
                     </div>
-
-
                 </div>
 
 
-                <form action="{% url 'Post:delete_comment' cm.id %}" method="POST">
-
+        
                     <div class="comment_box">
-                            <div class="row"></div>
+                        <div class="row"></div>
                     </div>
-                </form>
-
-
-                <div></div>
-
-               
-                
-         
-                </div>
-      
+            </div></div>
+<div>
             <p id="comment_box">
                 <input style="width:80%;" id="comment_content" name="comment_content" type="txt" placeholder="코멘트 입력창">
                 <input class="comment_btn" type="button" onclick="create_comment()" value="등록">
             </p>
-            <div>
-            </div>
-
             <div class="buttons">
                 <input class="submit_btn" type="button" onclick="to_edit_article(article_id)" value="게시글 수정"></a>
                 <input class="submit_btn" type="submit" onclick="delete_post(article_id)" value="게시글 삭제"></a>
 
-            </div>
+            </div></div>
 
         </div>
 

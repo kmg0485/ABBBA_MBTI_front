@@ -18,8 +18,6 @@ async function handleAuthorization() {
     })
 
     response_json = await response.json()
-
-    console.log(response_json)
     
     const movies = document.getElementById("container")
 
@@ -64,7 +62,6 @@ async function handleAuthorization() {
         
         like.classList.add("heart");
         like.style.margin = "auto"
-        // console.log(`user : ${payload_parse.user_id}, likes=${element.likes}`)
         if (element.likes.includes(payload_parse.user_id)){
             like.src = full_heart}
         else {

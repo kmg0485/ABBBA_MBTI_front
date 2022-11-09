@@ -9,9 +9,18 @@ body {
     margin: 10vh auto 0 auto;
     width: 40vw;
 }
+#wrap_comment_buttons{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
-
-
+#main_container{
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 .submit_btn {
     background: #ffcbcb;

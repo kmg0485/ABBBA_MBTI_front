@@ -41,8 +41,30 @@ async function handleAuthorization() {
     const poster = document.createElement("img");
     poster.src = movie.poster;
     poster.classList.add("rec_movie");
-
     movie_set.appendChild(poster);
+
+    const like_button = document.createElement("button")
+    like_button.style.border = 0
+    like_button.style.background = "none"
+    movie_set.appendChild(like_button)
+    
+    const like = document.createElement("img")
+    like.style.width = "20px";
+    like.classList.add("heart");
+    like.style.margin = "auto"
+    like.src = "https://cdn-icons-png.flaticon.com/512/1076/1076984.png"
+    like_button.onclick = function(){
+            fetch(`http://127.0.0.1:8000/movies/${movie.movie_id}/likes/`, {
+                headers: {
+                    "authorization": "Bearer " + localStorage.getItem("access")
+                },
+                method: 'POST',
+                body: {}
+            })
+            window.location.reload()
+    }
+    like_button.appendChild(like)
+    
   });
 
 
@@ -64,11 +86,8 @@ async function handleAuthorization() {
     person.classList.add("person")
     left.appendChild(person)
 
-    const image = document.createElement("img")
-    image.style.width = "7%"
-
-    image.src = "http://127.0.0.1:8000" + following.profile_img
-    person.appendChild(image)
+  
+    person.innerHTML = `<img src="http://127.0.0.1:8000/${following.profile_img}" style="width:7%" onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'">`
 
     const name = document.createElement("p")
     name.innerText = following.nickname
@@ -112,6 +131,7 @@ async function handleAuthorization() {
     image.style.width = "7%"
     image.src = "http://127.0.0.1:8000" + follower.profile_img
     person.appendChild(image)
+    person.innerHTML = `<img src="http://127.0.0.1:8000/${follower.profile_img}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'" style="width:7%">`
 
     const name = document.createElement("p")
     name.innerText = follower.nickname
@@ -128,7 +148,20 @@ async function handleAuthorization() {
   response_json.article_set.forEach(article => {
     const article_box = document.createElement("div")
     article_box.classList.add("article_box")
+    article_box.onclick = function () {
+
+      const id = article.id
+      fetch(`http://127.0.0.1:8000/articles/${id}/`, {
+          headers: {
+              "authorization": "Bearer " + localStorage.getItem("access")
+          },
+          method: 'GET',
+          body: {}
+      })
+      to_article_detail(id)
+  }
     articles.appendChild(article_box)
+    articles.classList.add("link")
 
     const article_title = document.createElement("h5")
     article_title.innerText = article.title
@@ -150,22 +183,25 @@ async function handleAuthorization() {
 
     const article_link = document.createElement("a")
     article_link.href = "#"
-    article_link.innerText = "click me!"
     article_link.classList.add("link")
-    article_link.onclick = `to_article_detail(${comment.article})`
+    article_link.onclick = function () {
+
+      const id = comment.article
+      fetch(`http://127.0.0.1:8000/articles/${id}/`, {
+          headers: {
+              "authorization": "Bearer " + localStorage.getItem("access")
+          },
+          method: 'GET',
+          body: {}
+      })
+      to_article_detail(id)
+  }
     comment_box.appendChild(article_link)
 
     const comment_content = document.createElement("p")
     comment_content.innerText = comment.content
     article_link.appendChild(comment_content)
   })
-
-
-
-
-
-
-
 }
 
 async function handletapmenu() {

@@ -82,7 +82,6 @@ async function handleAuthorization() {
         method: 'GET'
     })
     response_json = await response.json()
-    console.log(response_json)
 
 
     const bio = document.getElementById("bio")

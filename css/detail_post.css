@@ -1,27 +1,28 @@
 body {
     background: #f8f8f8;
-}
-
-.post_form {
+  }
+  
+  .post_form {
     padding: 40px;
     background-color: #fff;
     border: 1px solid #e6e6e6;
     margin: 10vh auto 0 auto;
     width: 40vw;
-}
-
-
-.border_line {
-    border-bottom: solid 2px gray;
-    border-top: solid 2px gray;
-}
-
-.card-body {
+  }
+  #wrap_comment_buttons {
     display: flex;
     justify-content: space-between;
-}
-
-.submit_btn {
+    flex-direction: column;
+  }
+  
+  #main_container {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .submit_btn {
     background: #ffcbcb;
     color: black;
     border: 1px solid #ffcbcb;
@@ -35,20 +36,20 @@ body {
     margin: 5px;
     cursor: pointer;
     border-radius: 5px;
-}
-
-.buttons {
+  }
+  
+  .buttons {
     display: flex;
     justify-content: space-around;
-}
-
-#comment_box {
+  }
+  
+  #comment_box {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-}
-
-.comment_btn {
+  }
+  
+  .comment_btn {
     background: #ffcbcb;
     color: black;
     border: 1px solid #ffcbcb;
@@ -63,24 +64,23 @@ body {
     margin-top: 10px;
     margin: 5px;
     cursor: pointer;
-}
-
-.comment_box {
+  }
+  
+  .comment_box {
     display: flex;
     justify-content: space-between;
-}
-
-.material-symbols-rounded {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-}
-
-
-.row {
+  }
+  
+  .material-symbols-rounded {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
+  
+  .row {
     width: 100%;
-}
-
-#home_button {
+  }
+  
+  #home_button {
     display: flex;
     justify-content: center;
     cursor: pointer;
-}
+  }

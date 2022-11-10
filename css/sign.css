@@ -1,47 +1,47 @@
 #main_container {
-                padding-top: 200px;
-                display: flex;
-                justify-content: center;
-            }
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+}
 
-            .form_container {
-                width: 350px;
-                margin: 0 auto;
-            }
+.form_container {
+    width: 350px;
+    margin: 0 auto;
+}
 
-            .form_container .form {
-                background-color: #fff;
-                border: 1px solid #e6e6e6;
-                padding: 0 40px 25px;
-                margin-bottom: 30px;
-            }
+.form_container .form {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 0 40px 25px;
+    margin-bottom: 30px;
+}
 
-            .form input {
-                width: 100%;
-                background: 0 0;
-                border: 1px solid #efefef;
-                border-radius: 3px;
-                box-sizing: border-box;
-                color: #262626;
-                font-size: 14px;
-                padding: 7px 8px;
-            }
+.form input {
+    width: 100%;
+    background: 0 0;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #262626;
+    font-size: 14px;
+    padding: 7px 8px;
+}
 
-            form .submit_btn {
-                background:  #bcdee7;
-                border-color:  #bcdee7;
-                color: black;
-                border-radius: 5px;
-                border-style: solid;
-                border-width: 1px;
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 28px;
-                outline: none;
-                padding: 0;
-                width: 100%;
-                margin-top: 10px;
-                cursor: pointer;
-                margin-bottom: 25px;
-            }
-/* css 최소화 완료 */
+form .submit_btn {
+    background:  #bcdee7;
+    border-color:  #bcdee7;
+    color: black;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    outline: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+/* css 理쒖냼�� �꾨즺 */

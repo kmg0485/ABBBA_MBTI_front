@@ -1,5 +1,4 @@
 const article_id = localStorage.getItem("article_id");
-console.log(article_id)
 window.onload = () => {
     post(article_id)
 }
@@ -16,7 +15,6 @@ async function post(article_id) {
     })
 
     response_json = await response.json()
-    console.log(response_json);
     title.innerText = response_json.title;
     content.innerText = response_json.content;
 }
@@ -24,8 +22,6 @@ async function post(article_id) {
 
 
 async function EditPost(article_id) {
-    
-    console.log(article_id)
     const content = document.getElementById("content").value
     const title = document.getElementById("title").value
     const response = await fetch(`http://127.0.0.1:8000/articles/${article_id}/`,{
@@ -39,6 +35,4 @@ async function EditPost(article_id) {
             "content":content,
         })
     })
-    console.log(response)
-
 }

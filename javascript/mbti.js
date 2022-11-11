@@ -16,7 +16,6 @@ async function handleAuthorization(){
     })
 
     response_json = await response.json()
-    console.log(response_json)
 
     const mbti = document.getElementById("mbti")
 

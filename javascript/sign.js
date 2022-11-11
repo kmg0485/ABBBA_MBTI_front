@@ -17,7 +17,6 @@ async function handleSignup() {
                 "password_check": password_check
             })
         })
-        console.log(response)
     }
 }
 
@@ -36,7 +35,6 @@ async function handleLogin() {
         })
     })
     const response_json = await response.json()
-    console.log(response_json)
 
     localStorage.setItem("access", response_json.access);
     localStorage.setItem("refresh", response_json.refresh);
@@ -50,8 +48,6 @@ async function handleLogin() {
     localStorage.setItem("payload", jsonPayload);
     alert("로그인이 완료되었습니다!")
 
-    console.log(jsonPayload)
-
     const Response = await fetch("http://127.0.0.1:8000/users/profile/", {
       headers: {
           "authorization": "Bearer " + localStorage.getItem("access")
@@ -59,9 +55,6 @@ async function handleLogin() {
       method: 'GET'
     })
     json = await Response.json()
-    console.log(json)
-    
-
 
     if (json.mbti==""){
         location.href="edit_profile.html"

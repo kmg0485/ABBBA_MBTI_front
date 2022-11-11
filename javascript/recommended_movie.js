@@ -10,7 +10,6 @@ async function handleAuthorization() {
     const greeting = document.getElementById("greeting")
     greeting.innerText = `${nickname}님, 반가워요!`
 
-    console.log(payload_parse)
 
     const response = await fetch(`http://127.0.0.1:8000/movies/extractlist/${payload_parse.user_id}/`, {
         headers: {
@@ -25,8 +24,6 @@ async function handleAuthorization() {
     response.forEach(element => {
         movie_list.push(element)
     });
-    console.log(movie_list)
-
 
 
     const container = document.getElementById("container")
@@ -42,7 +39,6 @@ async function handleAuthorization() {
         method: 'GET'
     })
     .then(movie => movie.json())
-    console.log(movie)
 
     const movie_set = document.createElement("div")
     movie_set.style.display = "flex"

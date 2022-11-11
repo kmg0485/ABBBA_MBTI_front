@@ -1,86 +1,86 @@
 body {
-    background: #f8f8f8;
+  background: #f8f8f8;
 }
 
 .post_form {
-    padding: 40px;
-    background-color: #fff;
-    border: 1px solid #e6e6e6;
-    margin: 10vh auto 0 auto;
-    width: 40vw;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  margin: 10vh auto 0 auto;
+  width: 40vw;
+}
+#wrap_comment_buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-
-.border_line {
-    border-bottom: solid 2px gray;
-    border-top: solid 2px gray;
-}
-
-.card-body {
-    display: flex;
-    justify-content: space-between;
+#main_container {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .submit_btn {
-    background: #ffcbcb;
-    color: black;
-    border: 1px solid #ffcbcb;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 28px;
-    outline: none;
-    width: 100%;
-    padding: 0;
-    margin-top: 10px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
+  background: #ffcbcb;
+  color: black;
+  border: 1px solid #ffcbcb;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 28px;
+  outline: none;
+  width: 100%;
+  padding: 0;
+  margin-top: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 #comment_box {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .comment_btn {
-    background: #ffcbcb;
-    color: black;
-    border: 1px solid #ffcbcb;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 28px;
-    outline: none;
-    width: 15%;
-    height: 20%;
-    padding: 0;
-    margin-top: 10px;
-    margin: 5px;
-    cursor: pointer;
+  background: #ffcbcb;
+  color: black;
+  border: 1px solid #ffcbcb;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 28px;
+  outline: none;
+  width: 15%;
+  height: 20%;
+  padding: 0;
+  margin-top: 10px;
+  margin: 5px;
+  cursor: pointer;
 }
 
 .comment_box {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .material-symbols-rounded {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
-
 .row {
-    width: 100%;
+  width: 100%;
 }
 
 #home_button {
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }

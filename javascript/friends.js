@@ -24,7 +24,6 @@ async function handleAuthorization() {
     const email = document.getElementById("email")
     const mbti = document.getElementById("mbti")
     const image = document.getElementById("profile_image")
-console.log(response_json)
     bio.innerText = response_json.bio
     email.innerText = response_json.email
     mbti.innerText = response_json.mbti
@@ -41,10 +40,8 @@ console.log(response_json)
         wrappingDiv.style.justifyContent = "center";
         people.appendChild(wrappingDiv)
 
-        const image = document.createElement("img")
-
         wrappingDiv.innerHTML = `<img src="http://127.0.0.1:8000/${person.profile_img}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'" class="follower_image">`
- 
+
 
         const list = document.createElement("h3")
         list.style.width = "70%";
@@ -64,18 +61,18 @@ console.log(response_json)
         unfollow.classList.add("submit_btn");
         unfollow.innerHTML = "UNFOLLOW"
         unfollow.onclick = function () {
-        
-        const id = person.id
-        fetch(`http://127.0.0.1:8000/users/follow/${id}/`, {
-            headers: {
-                "authorization": "Bearer " + localStorage.getItem("access")
-            },
-            method: 'POST',
-            body: {}
-        })
-        alert("언팔로우!")
-        window.location.reload()
-    }
+
+            const id = person.id
+            fetch(`http://127.0.0.1:8000/users/follow/${id}/`, {
+                headers: {
+                    "authorization": "Bearer " + localStorage.getItem("access")
+                },
+                method: 'POST',
+                body: {}
+            })
+            alert("언팔로우!")
+            window.location.reload()
+        }
         wrappingDiv.appendChild(unfollow)
     })
 
@@ -103,8 +100,8 @@ async function handleRecommend() {
 
         const image = document.createElement("img")
 
-        image.src ="http://127.0.0.1:8000/" +  person.profile_img
-        image.onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'"
+        image.src = "http://127.0.0.1:8000/" + person.profile_img
+        image.onerror = "this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'"
         image.style.margin = "auto";
         image.style.width = "10%";
         image.style.aspectRatio = "1/1";
@@ -130,18 +127,18 @@ async function handleRecommend() {
         unfollow.classList.add("submit_btn");
         unfollow.innerHTML = "FOLLOW"
         unfollow.onclick = function () {
-        
-        const id = person.id
-        fetch(`http://127.0.0.1:8000/users/follow/${id}/`, {
-            headers: {
-                "authorization": "Bearer " + localStorage.getItem("access")
-            },
-            method: 'POST',
-            body: {}
-        })
-        alert("팔로우 성공!")
-        window.location.reload()
-    }
+
+            const id = person.id
+            fetch(`http://127.0.0.1:8000/users/follow/${id}/`, {
+                headers: {
+                    "authorization": "Bearer " + localStorage.getItem("access")
+                },
+                method: 'POST',
+                body: {}
+            })
+            alert("팔로우 성공!")
+            window.location.reload()
+        }
         wrappingDiv.appendChild(unfollow)
     })
 

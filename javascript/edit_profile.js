@@ -126,5 +126,5 @@ async function insertProfile() {
         body: formData
     })
     alert("프로필 저장이 완료되었습니다!")
-    location.href="friends.html"
+    location.href="main.html";
   }

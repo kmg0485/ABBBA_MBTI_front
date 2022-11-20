@@ -39,8 +39,11 @@
                     <p>
                         <input type="password" placeholder="비밀번호 확인" id="password_check">
                     </p>
-
-                    <button onclick="handleSignup(); to_signin();" type="button" class="submit_btn">회원가입</button>
+                    <div id="alert_box">
+                        <p id="alert"></p>
+                    </div>
+                    <button onclick="to_signin();" type="button" class="submit_btn">이미 가입이 돼있으신가요?</button>
+                    <button onclick="handleSignup();" type="button" class="submit_btn">회원가입</button>
                 </form>
             </div>
         </div>

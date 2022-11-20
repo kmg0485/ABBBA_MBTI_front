@@ -31,6 +31,7 @@ async function handleAuthorization() {
 
     // 팔로워 목록 띄우기
     const people = document.getElementById("followings")
+    console.log(response_json)
 
     response_json.followings.forEach(person => {
         const wrappingDiv = document.createElement("div")
@@ -42,7 +43,7 @@ async function handleAuthorization() {
 
         wrappingDiv.innerHTML = `<img src="http://127.0.0.1:8000/${person.profile_img}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'" class="follower_image">`
 
-
+    
         const list = document.createElement("h3")
         list.style.width = "70%";
         list.style.marginLeft = "5%";
@@ -99,7 +100,7 @@ async function handleRecommend() {
         people.appendChild(wrappingDiv)
 
         const image = document.createElement("img")
-
+        
         image.src = "http://127.0.0.1:8000/" + person.profile_img
         image.onerror = "this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'"
         image.style.margin = "auto";
@@ -113,6 +114,7 @@ async function handleRecommend() {
         list.style.width = "70%";
         list.style.marginLeft = "5%";
         wrappingDiv.appendChild(list)
+
 
         const spanOne = document.createElement("span")
         spanOne.innerText = `${person.nickname} :`

@@ -5,21 +5,37 @@ async function handleSignup() {
     const password = document.getElementById("password").value
     const password_check = document.getElementById("password_check").value
 
-    if (password == password_check) {
-        const response = await fetch('http://127.0.0.1:8000/users/', {
-            headers: {
-                'content-type': 'application/json',
-            },
-            method: 'POST',
-            body: JSON.stringify({
-                "nickname": nickname,
-                "password": password,
-                "password_check": password_check
-            })
+    const response = await fetch('http://127.0.0.1:8000/users/', {
+        headers: {
+            'content-type': 'application/json',
+        },
+        method: 'POST',
+        body: JSON.stringify({
+            "nickname": nickname,
+            "password": password,
+            "password_check": password_check
         })
+    })
+    const message = await response.json()
+
+    const alert = document.getElementById("alert")
+
+    if (response.status === 201){
+        alert("회원가입 성공!");
+    }
+    else if(response.status === 400){
+    if ("nickname" in message){
+        alert.innerText = message.nickname[0]
+    }
+    else if ("password" in message){
+        alert.innerText = message.password[0]
+    }
+    else if ("password_check" in message){
+        alert.innerText = message.password_check[0]
+    }
+
     }
 }
-
 async function handleLogin() {
     const nickname = document.getElementById("nickname").value
     const password = document.getElementById("password").value

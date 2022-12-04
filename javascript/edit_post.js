@@ -24,7 +24,8 @@ async function post(article_id) {
 async function EditPost(article_id) {
     const content = document.getElementById("content").value
     const title = document.getElementById("title").value
-    const response = await fetch(`http://127.0.0.1:8000/articles/${article_id}/`,{
+    
+    await fetch(`http://127.0.0.1:8000/articles/${article_id}/`,{
         headers:{
             'content-type':'application/json',
             "authorization" : "Bearer " + localStorage.getItem("access")

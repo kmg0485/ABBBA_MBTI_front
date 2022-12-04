@@ -18,9 +18,6 @@ body{
     flex-wrap: wrap;
   }
   
-  
- 
-
 .card{
     display:flex;
     margin:auto;

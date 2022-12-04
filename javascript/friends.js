@@ -31,7 +31,6 @@ async function handleAuthorization() {
 
     // 팔로워 목록 띄우기
     const people = document.getElementById("followings")
-    console.log(response_json)
 
     response_json.followings.forEach(person => {
         const wrappingDiv = document.createElement("div")

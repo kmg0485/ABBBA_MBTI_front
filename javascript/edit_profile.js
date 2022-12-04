@@ -69,6 +69,7 @@ function previewImage(targetObj) {
     }
 }
 
+
 async function handleAuthorization() {
     const payload = localStorage.getItem("payload");
     const payload_parse = JSON.parse(payload)
@@ -117,7 +118,7 @@ async function insertProfile() {
     formData.append("mbti", mbti)
     formData.append("profile_img", profile_img.files[0]);
   
-    const response = await fetch('http://127.0.0.1:8000/users/profile/', {
+    await fetch('http://127.0.0.1:8000/users/profile/', {
         headers: {
             "authorization": "Bearer " + localStorage.getItem("access")
         },

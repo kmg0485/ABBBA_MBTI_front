@@ -7,8 +7,6 @@ async function handleAuthorization() {
   const payload = localStorage.getItem("payload");
   const payload_parse = JSON.parse(payload);
   const nickname = document.getElementById("nickname");
-  //   const nickname = payload_parse.nickname;
-  const user = payload_parse.user_id;
   nickname.innerText = payload_parse.nickname;
   const response = await fetch(`http://127.0.0.1:8000/users/profile/`, {
     headers: {

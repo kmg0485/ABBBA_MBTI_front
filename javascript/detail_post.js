@@ -18,7 +18,6 @@ async function post(article_id) {
   });
 
   response_json = await response.json();
-  console.log(response_json);
   title.innerText = response_json.title;
   content.innerText = response_json.content;
   const comment_set = response_json.comment_set;
@@ -46,7 +45,8 @@ async function post(article_id) {
 
 async function delete_comment(id) {
   comment_id = id;
-  const response = await fetch(`http://127.0.0.1:8000/articles/${article_id}/comment/${comment_id}/`, {
+  
+  await fetch(`http://127.0.0.1:8000/articles/${article_id}/comment/${comment_id}/`, {
     headers: {
       authorization: "Bearer " + localStorage.getItem("access"),
     },
@@ -58,7 +58,8 @@ async function delete_comment(id) {
 
 async function create_comment() {
   const content = document.getElementById(`comment_content`).value;
-  const response = await fetch(`http://127.0.0.1:8000/articles/${article_id}/comment/`, {
+
+  await fetch(`http://127.0.0.1:8000/articles/${article_id}/comment/`, {
     headers: {
       "content-type": "application/json",
       authorization: "Bearer " + localStorage.getItem("access"),
